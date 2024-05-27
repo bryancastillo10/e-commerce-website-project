@@ -1,0 +1,125 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Contact Us Section and Address */
+@layer components {
+    .form-container {
+    @apply mx-auto max-w-md md:max-w-full md:mx-0 2xl:max-w-full px-6
+    my-4 py-12 border-2 rounded-2xl shadow-lg sm:rounded-3xl;
+  }
+  .form-title {
+    @apply text-2xl font-bold mb-8 text-center;
+  }
+  .form-field {
+    @apply relative z-0 mb-5 p-1 ;
+  }
+
+  .form-input {
+    @apply block w-full pt-3 pb-2 px-0 mt-0 focus:border-secondary
+     ;
+  }
+
+  .form-label {
+    @apply absolute duration-300 top-3 z-[-1] origin-[0%] text-white/80;
+  }
+
+  .form-field-textarea {
+    @apply flex flex-col gap-2 text-white/80;
+  }
+
+  .form-billing-select {
+    @apply pt-3 pb-2 block w-full px-0 mt-0 z-[-1] border-gray-200;
+  }
+  .address-container {
+    @apply flex flex-col gap-2 p-4 lg:w-[95%]
+     border-[0.5px] shadow-md rounded-xl;
+  }
+  .address-header {
+    @apply flex justify-start gap-2 items-center text-lg;
+  }
+  
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label,
+  textarea:focus ~ label,
+  textarea:not(:placeholder-shown) ~ label,
+  select:focus ~ label,
+  select:not([value=""]):valid ~ label {
+    @apply translate-x-[var(--tw-translate-x)] translate-y-[var(--tw-translate-y)] 
+    rotate-[var(--tw-rotate)] skew-x-[var(--tw-skew-x)] skew-y-[var(--tw-skew-y)] 
+    scale-x-[var(--tw-scale-x)] scale-y-[var(--tw-scale-y)];
+    /* @apply transform; scale-75; -translate-y-6; */
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 0.75;
+    --tw-scale-y: 0.75;
+    --tw-translate-y: -1.5rem;
+  }
+  input:focus ~ label,
+  textarea:focus ~ label,
+  select:focus ~ label {
+    @apply text-[rgba(5,47,71,var(--tw-text-opacity))] left-0;
+    /* @apply text-black; left-0; */
+    --tw-text-opacity: 1;
+  }
+}
+
+/* Quote Generator Section */
+@layer components {
+  .quote-section-layout {
+    @apply flex flex-col justify-center items-center gap-4;
+  }
+  .quote-card-container {
+    @apply flex flex-col justify-between
+    w-full max-w-[90%] md:max-w-[50%] border-2 rounded-2xl p-4;
+  }
+  .quote-header {
+    @apply flex flex-col justify-center items-end mt-1 md:py-2;
+  }
+  .quote-statement {
+    @apply font-bold md:text-[20px] xl:text-[22px] md:max-w-full md:mr-auto
+          text-justify;
+  }
+  .quote-author-name {
+    @apply flex gap-1 items-center mt-2 text-sm md:text-[18px] md:p-1;
+  }
+  .quote-tags {
+    @apply text-sm md:text-[18px] md:p-2.5
+      rounded-2xl p-2 shadow-md mb-4;
+  }
+}
+
+/* Testimonial Section */
+@layer components{
+  .testimonials-container{
+    @apply overflow-hidden relative p-2 w-[90%];
+  }
+  .animate-testimonials-container{
+    @apply flex relative transition-transform ease-out duration-1000;
+  }
+  .testimonials-btn-section{
+    @apply flex items-center justify-between left-[-16px] right-[-16px]
+    md:right-[100px] md:left-[100px]
+    lg:right-[180px] lg:left-[180px]
+     p-4 absolute inset-0;
+  }
+  .testimonials-layout{
+    @apply flex flex-col shrink-0 gap-2 w-full  mx-auto;
+  }
+  .testimonials-card{
+    @apply flex flex-col justify-evenly gap-6 md:gap-0
+    border-2 border-white rounded-2xl p-8 lg:min-h-[250px] w-[80%]
+    md:max-w-[50%] m-auto;
+  }
+  .slide-btn{
+    @apply p-1 rounded-full text-black shadow-md bg-white/50 hover:bg-white;
+  }
+  .slide-indicator-position{
+    @apply absolute bottom-0 md:bottom-6 left-0 right-0;
+  }
+  .slide-indicator{
+    @apply flex justify-center items-center gap-2;
+  }
+}

@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+:root {
+  --primary-color: #053D5D;
+  --secondary-color: #0072b2;
+  --accent-color: #88CCEE;
+  --gray-bg: #e5e5e5;
+  --danger-color: #e8407e;
+  --primary-font: "Merriweather", "Sans serif";
+  --secondary-font: "Abril Fatface", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  scroll-behavior: smooth;
+}
+
+/* Theme Context */
+@layer utilities {
+  .main-gradient {
+    background-color: #1396E0;
+    background-image: linear-gradient(
+        60deg,
+        hsl(120, 0%, 60%) 0,
+        transparent 55%
+      ),
+      linear-gradient(135deg, hsl(255, 0%, 80%) 0, transparent 55%);
+  }
+
+  .dark-gradient {
+    background-color: #151515;
+    background-image: linear-gradient(
+        65deg,
+        hsl(202.31, 80%, 19%) 0,
+        transparent 59%
+      ),
+      linear-gradient(
+        135deg,
+        hsl(30, 3%, 14.000000000000002%) 0,
+        transparent 55%
+      );
+  }
+  .blue-glass {
+    @apply backdrop-blur-[3px] backdrop-saturate-[125%] bg-[rgba(0,114,178,0.50)] 
+   p-4 shadow-md;
+    -webkit-backdrop-filter: blur(3px) saturate(150%);
+  }
+  .bg-secondary-glass {
+    @apply bg-[rgba(0,114,178,0.5)] backdrop-blur-[3px] 
+    backdrop-saturate-[100%] text-[white];
+    -webkit-backdrop-filter: blur(3px) saturate(150%);
+  }
+  .form-glass {
+    @apply backdrop-blur-[3px] backdrop-saturate-[125%] bg-[rgba(229,229,229,0.25)] 
+   p-4 shadow-md;
+    -webkit-backdrop-filter: blur(3px) saturate(150%);
+  }
+}
+
+/* Media Query */
+@layer utilities {
+  .section-container {
+    @apply w-full m-auto text-justify  pt-[65px];
+  }
+  .footer-container {
+    @apply lg:max-w-[1100px] md:max-w-[700px] max-w-[320px] m-auto;
+  }
+  .query-container {
+    @apply max-w-[350px] lg:max-w-[1000px]
+      sm:max-w-[600px] xs:max-w-[300px] 2xs:max-w-[250px] m-auto;
+  }
+}
+
+/* Typography */
+@layer utilities {
+  .section-header {
+    @apply font-bold text-[28px] lg:text-[2em] sm:text-[1.8em] leading-tight mb-8;
+  }
+  .section-subtitle {
+    @apply text-[1.25em] lg:text-[1.5em] font-medium;
+  }
+  .section-content {
+    @apply leading-tight text-[18px] lg:text-[1.5em] md:leading-none
+    sm:text-[1.25em];
+  }
+}

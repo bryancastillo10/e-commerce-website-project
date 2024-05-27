@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Acer",
+        "price": 37000,
+        "imgPath": "/images/acer.png"
+    },
+    {
+        "id": 2,
+        "name": "Asus",
+        "price": 39000,
+        "imgPath": "/images/asus.png"
+    },
+    {
+        "id": 3,
+        "name": "HP",
+        "price": 37000,
+        "imgPath": "/images/hp.png"
+    },
+    {
+        "id": 4,
+        "name": "Apple",
+        "price": 55000,
+        "imgPath": "/images/apple.png"
+    },
+    {
+        "id": 5,
+        "name": "Dell",
+        "price": 40000,
+        "imgPath": "/images/dell.png"
+    },
+    {
+        "id": 6,
+        "name": "MSI",
+        "price": 59000,
+        "imgPath": "/images/msi.png"
+    },
+    {
+        "id": 7,
+        "name": "Samsung",
+        "price": 15500,
+        "imgPath": "/images/samsung.png"
+    },
+    {
+        "id": 8,
+        "name": "XiaoMi",
+        "price": 11000,
+        "imgPath": "/images/xiaomi.png"
+    },
+    {
+        "id": 9,
+        "name": "Oppo",
+        "price": 12500,
+        "imgPath": "/images/oppo.png"
+    }
+]
