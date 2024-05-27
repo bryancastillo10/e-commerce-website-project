@@ -14,7 +14,7 @@ const Contact = () => {
                     <h1 className="section-header">Feel Free to Message Us</h1>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 md:max-w-[80%] mx-auto ">
+            <div className="grid grid-cols-1 md:grid-cols-3 md:max-w-[90%] mx-auto ">
                 <div className="max-w-[80%] md:max-w-full mx-auto col-span-2">
                     <ContactForm />
                     {openModal && <MessageSentModal
@@ -24,8 +24,8 @@ const Contact = () => {
                         openModal={openModal}
                         toggleModal={toggleModal} />}
                 </div>
-                <div className="flex flex-col gap-2 justify-between
-                items-center mt-10 md:mt-0 max-w-[90%] md:w-full mx-auto">
+                <div className="flex flex-col gap-2 justify-between md:ml-[-40px]
+                items-center mt-10 md:mt-0 max-w-[90%] md:max-w-[95%] mx-auto">
                     <Trends />
                     <AddressSection />
                 </div>
