@@ -1,21 +1,20 @@
-import { Contact, Quotes, Testimonials } from "src/components";
-import { ContactUsFormContextProvider } from "src/context/ContactUsFormContext";
+import { Contact, Services, Quotes } from "../ui";
 import { QuoteGenContextProvider } from "src/context/QuotesContext";
-import { motion } from "framer-motion";
-import "src/styles/contactPageComponents.modules.css";
+import { ContactUsFormContextProvider } from "src/context/ContactUsFormContext";
+import "../styles/contactPage.css";
 
 const ContactPage = () => {
-    return (
-        <motion.div>
-            <ContactUsFormContextProvider>
-                    <Contact />
-            </ContactUsFormContextProvider>
-            <QuoteGenContextProvider>
-                <Quotes />
-            </QuoteGenContextProvider>
-            <Testimonials />
-        </motion.div>
-    )
+  return (
+    <>
+      <ContactUsFormContextProvider>
+              <Contact />
+      </ContactUsFormContextProvider> 
+      <Services />
+      <QuoteGenContextProvider>
+          <Quotes/>
+      </QuoteGenContextProvider>          
+    </>
+  )
 }
 
 export default ContactPage;

@@ -1,10 +1,10 @@
 import { useBillingContext, useShoppingContext } from "src/context/UseContexts";
 import { Link } from "react-router-dom";
-import { AddedCartItems, BillingInfo } from "./child";
+import { AddedCartItems, BillingInfo } from "../components";
 import { ArrowBigLeft, PartyPopper } from "lucide-react";
 import { motion } from "framer-motion";
 import { buttonAnimation } from "src/utilities/animation";
-import { MessageSentModal } from "src/components/child";
+import { Modal } from "src/components";
 import { purchaseTitle, purchaseContent } from "src/utilities";
 
 const CheckOut = () => {
@@ -46,7 +46,7 @@ const CheckOut = () => {
             <div className="form-container form-glass max-w-[90%] md:max-w-[80%] mx-auto">
                 <h1 className="form-title">Billing Form</h1>
                 <BillingInfo />
-                {openModal && <MessageSentModal
+                {openModal && <Modal
                     header={purchaseTitle}
                     content={purchaseContent}
                     icon={PartyPopper}

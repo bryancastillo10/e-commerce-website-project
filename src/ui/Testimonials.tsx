@@ -58,7 +58,7 @@ const Testimonials = () => {
                     <div className="slide-indicator-position">
                         <div className="slide-indicator">
                             {customerFeedback.map((_, i) => (
-                                <div className={`transition-all size-3 bg-white rounded-full
+                                <div key={i}  className={`transition-all size-3 bg-white rounded-full
                                 ${slideIndex === i ? "p-2" : "bg-opacity-50"}
                                 `} />
                             ))}

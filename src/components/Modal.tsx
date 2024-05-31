@@ -5,7 +5,7 @@ import { buttonAnimation } from "src/utilities/animation";
 import { LucideIcon } from "lucide-react";
 import { useThemeContext } from "src/context/UseContexts";
 
-interface MessageSentModalProps {
+interface ModalProps {
     header: string;
     content: string;
     icon: LucideIcon;
@@ -13,7 +13,7 @@ interface MessageSentModalProps {
     toggleModal: () => void;
 }
 
-const MessageSentModal = ({ header, content, icon: Icon, openModal, toggleModal }: MessageSentModalProps) => {
+const Modal = ({ header, content, icon: Icon, openModal, toggleModal }: ModalProps) => {
     const { theme } = useThemeContext();
     return (
         <Transition appear show={openModal}>
@@ -56,4 +56,4 @@ const MessageSentModal = ({ header, content, icon: Icon, openModal, toggleModal 
     )
 }
 
-export default MessageSentModal
+export default Modal

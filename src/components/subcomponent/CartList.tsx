@@ -1,6 +1,6 @@
 import { CartListProps } from "src/context/contextTypes";
 import { useShoppingContext } from "src/context/UseContexts";
-import { AddedCartItems } from "src/components/child";
+import AddedCartItems from "./AddedCartItems";
 import { motion } from "framer-motion";
 import { CircleX } from "lucide-react";
 import { formatCurrency } from "src/utilities";

@@ -1,7 +1,8 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { LandingPage, ContactPage, ShopPage } from "src/pages";
-import { About, Services, Sales, Shop, CheckOut } from "src/components";
-import { Contact, Quotes, Testimonials } from "src/components";
+import { Hero, About, Testimonials } from "src/ui";
+import { Contact, Services, Quotes } from "src/ui";
+import { Shop, Sales, CheckOut } from "src/ui";
 import { NotFound } from ".";
 import { AnimatePresence } from "framer-motion";
 import { BillingContextProvider } from "src/context/BillingInfoContext";
@@ -14,14 +15,14 @@ const PageRoutes = () => {
             <AnimatePresence>
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<LandingPage />}>
+                        <Route path="home" element={<Hero/>}/>
                         <Route path="about" element={<About />} />
-                        <Route path="services" element={<Services />} />
-                        <Route path="sales" element={<Sales />} />
+                        <Route path="testimonials" element={<Testimonials />} />
                     </Route>
                     <Route path="contact" element={<ContactPage />}>
                         <Route path="contact-form" element={<Contact />} />
+                        <Route path="services" element={<Services />} />
                         <Route path="quotes" element={<Quotes />} />
-                        <Route path="testimonials" element={<Testimonials />} />
                         <Route />
                     </Route>
                     <Route path="shop" element={<ShopPage />}>

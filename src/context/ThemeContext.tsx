@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { ContextProviderType, ThemeContextType } from "./contextTypes";
-import { ThemeToggle } from "../components/child";
+import ThemeToggle from "../components/ThemeToggle";
 
 export const ThemeContext = createContext({} as ThemeContextType);
 

@@ -6,7 +6,7 @@ import { fetchCountry } from "src/utilities";
 import { billingFormItems, paymentMethodOptions } from "src/constants";
 import { motion } from "framer-motion";
 import { buttonAnimation } from "src/utilities/animation";
-import PriceSummary from "./PriceSummary";
+import {PriceSummary} from "./subcomponent";
 
 
 const BillingInfo = () => {

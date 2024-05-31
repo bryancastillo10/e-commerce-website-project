@@ -1,6 +1,7 @@
 import { ShoppingCart } from "lucide-react";
 import storeItems from "src/constants/shop.json";
-import { ShopCards, CartList } from "src/components/child";
+import { ShopCards } from "../components/";
+import { CartList } from "../components/subcomponent";
 import { useShoppingContext } from "src/context/UseContexts";
 
 

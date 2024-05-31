@@ -1,6 +1,6 @@
 import { ShopCardsProps } from "src/constants/shoptype";
 import { formatCurrency } from "src/utilities";
-import { QuantityButton } from "src/components/child";
+import {QuantityButton} from "./subcomponent";
 import { useShoppingContext } from "src/context/UseContexts";
 
 const ShopCards = ({ id, name, price, imgPath }: ShopCardsProps) => {

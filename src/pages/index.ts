@@ -1,5 +1,5 @@
 import LandingPage from "./LandingPage";
-import ShopPage from "./ShopPage";
 import ContactPage from "./ContactPage";
+import ShopPage from "./ShopPage";
 
-export { LandingPage, ShopPage, ContactPage };
+export { LandingPage, ContactPage, ShopPage };

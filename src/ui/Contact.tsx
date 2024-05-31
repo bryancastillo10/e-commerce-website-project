@@ -1,4 +1,5 @@
-import { ContactForm, Trends, AddressSection, MessageSentModal } from "./child";
+import { ContactForm, Trends, Modal } from "../components";
+import { AddressSection } from "../components/subcomponent";
 import { useContactFormContext } from "src/context/UseContexts";
 import { messageSentTitle, messageSentContent } from "src/utilities";
 import { Send } from "lucide-react";
@@ -17,7 +18,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 md:max-w-[90%] mx-auto ">
                 <div className="max-w-[80%] md:max-w-full mx-auto col-span-2">
                     <ContactForm />
-                    {openModal && <MessageSentModal
+                    {openModal && <Modal
                         header={messageSentTitle}
                         content={messageSentContent}
                         icon={Send}

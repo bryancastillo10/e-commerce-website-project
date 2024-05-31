@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { buttonAnimation } from "src/utilities/animation";
-import { QuoteCards } from "./child";
+import { QuoteCards } from "../components";
 import { useQuotesContext } from "src/context/UseContexts";
 
 
@@ -32,7 +32,7 @@ const Quotes = () => {
                     initial="initial"
                     exit="exit"
                     animate={allowFetch ? 'initial' : 'zoom'}
-                >
+                >           
                     <QuoteCards generatedQuotes={contentAuthor} tags={tagLine} />
                 </motion.div>
             </div>
