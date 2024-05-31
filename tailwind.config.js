@@ -7,8 +7,16 @@ export default {
         primary: "var(--primary-color)",
         secondary: "var(--secondary-color)",
         accent: "var(--accent-color)",
-        neutral:"var(--neutral)",
+        neutral: "var(--neutral)",
+        "neutral-green": "var(--neutral-green)",
         danger: "var(--danger-color)"
+      },
+      fontWeight: {
+        light: "300",
+        medium: "400",
+        bold: "700",
+      }, fontSize: {
+        base: "18px",
       },
       fontFamily: {
         primary: "var(--primary-font)",
@@ -23,6 +31,6 @@ export default {
 
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [],
 }
 

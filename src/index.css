@@ -5,12 +5,15 @@
 @tailwind utilities;
 @tailwind components;
 
+
+/* Blue, White, Navy Blue, Black, Light Green, Rose */
 :root {
-  --primary-color: #25171a;
-  --secondary-color: #69ddff;
-  --accent-color: #150578;
-  --neutral: #151515;
-  --danger-color: #e8407e;
+  --primary-color: hsl(202, 100%, 35%);  
+  --secondary-color: hsl(30, 8%, 95%);  
+  --accent-color: hsl(248, 92%, 25%);  
+  --neutral: hsl(0, 0%, 8%);  
+  --neutral-green: hsl(163, 75%, 34%); 
+  --danger-color: hsl(338, 79%, 58%);  
   --primary-font: "Merriweather", "Sans serif";
   --secondary-font: "Abril Fatface", serif;
 }
@@ -36,8 +39,8 @@
     -webkit-backdrop-filter: blur(3px) saturate(150%);
   }
   .form-glass {
-    @apply backdrop-blur-[3px] backdrop-saturate-[125%] bg-[rgba(229,229,229,0.25)] 
-   p-4 shadow-md;
+    @apply backdrop-blur-[3px] backdrop-saturate-[150%]
+     bg-[rgba(243,242,241,0.8)] p-4 shadow-md;
     -webkit-backdrop-filter: blur(3px) saturate(150%);
   }
 }

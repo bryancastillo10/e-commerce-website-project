@@ -15,9 +15,9 @@ const NavDropDown: NavDropDownProps = {
     },
     {
         id: 2,
-        title: "Services",
-        subTitle: "Services We Can Offer",
-        link: "services"
+        title: "Testimonials",
+        subTitle: "Customer Feedback",
+        link: "testimonials"
     },
     {
         id: 3,
@@ -35,16 +35,16 @@ const NavDropDown: NavDropDownProps = {
     },
     {
         id: 2,
-        title: "Get Quotes",
-        subTitle: "Random Quote Generator",
-        link: "quotes"
+        title: "Services",
+        subTitle: "Services We Can Offer",
+        link: "services"
 
     },
     {
         id: 3,
-        title: "Testimonials",
-        subTitle: "Customer Feedbacks",
-        link: "testimonials"
+        title: "Get Quotes",
+        subTitle: "Random Quote Generator",
+        link: "quotes"
     }],
     "Shop": [{
         id: 1,
@@ -277,7 +277,7 @@ const billingFormItems: billingFormItemsProps[] = [
         name: "lastName",
         required: true
     },
-        {
+    {
         id: 3,
         label: "Email",
         type: "text",
@@ -306,25 +306,25 @@ const billingFormItems: billingFormItemsProps[] = [
 const paymentMethodOptions: paymentMethodOptionsProps[] = [
     {
         id: 1,
-        type:"radio",
+        type: "radio",
         value: "Option1/MasterCard",
         payMethod: "MasterCard"
     },
     {
         id: 2,
-        type:"radio",
+        type: "radio",
         value: "Option2/Visa",
         payMethod: "Visa"
     },
     {
         id: 3,
-        type:"radio",
+        type: "radio",
         value: "Option3/Visa",
         payMethod: "Cryptocurrency"
     },
     {
         id: 4,
-        type:"radio",
+        type: "radio",
         value: "Option4/Visa",
         payMethod: "Cash on Delivery (COD)"
     },
