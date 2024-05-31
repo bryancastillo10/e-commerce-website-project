@@ -52,7 +52,7 @@ const Navbar = () => {
 
         {/* Call to Action Button */}
         <div className="hidden md:flex lg:max-w-[200px] mx-10  items-center">
-          <Button type="call">Shop</Button>
+          <Button type="call">Get Started</Button>
         </div>
 
         {/* Hamburger Menu */}
