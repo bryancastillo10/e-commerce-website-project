@@ -6,10 +6,10 @@
 @tailwind components;
 
 :root {
-  --primary-color: #053D5D;
-  --secondary-color: #0072b2;
-  --accent-color: #88CCEE;
-  --gray-bg: #e5e5e5;
+  --primary-color: #25171a;
+  --secondary-color: #69ddff;
+  --accent-color: #150578;
+  --neutral: #151515;
   --danger-color: #e8407e;
   --primary-font: "Merriweather", "Sans serif";
   --secondary-font: "Abril Fatface", serif;
@@ -25,29 +25,6 @@
 
 /* Theme Context */
 @layer utilities {
-  .main-gradient {
-    background-color: #1396E0;
-    background-image: linear-gradient(
-        60deg,
-        hsl(120, 0%, 60%) 0,
-        transparent 55%
-      ),
-      linear-gradient(135deg, hsl(255, 0%, 80%) 0, transparent 55%);
-  }
-
-  .dark-gradient {
-    background-color: #151515;
-    background-image: linear-gradient(
-        65deg,
-        hsl(202.31, 80%, 19%) 0,
-        transparent 59%
-      ),
-      linear-gradient(
-        135deg,
-        hsl(30, 3%, 14.000000000000002%) 0,
-        transparent 55%
-      );
-  }
   .blue-glass {
     @apply backdrop-blur-[3px] backdrop-saturate-[125%] bg-[rgba(0,114,178,0.50)] 
    p-4 shadow-md;

@@ -1,9 +1,18 @@
 
+
 const Navbar = () => {
   return (
-    <div>
-      Navbar Rendered
-    </div>
+    <nav className="">
+      <div className="">
+          Header 
+      </div>
+      <div className="">
+          Links
+      </div>
+      <div className="">
+        Call to Action
+      </div>
+    </nav>
   )
 }
 

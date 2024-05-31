@@ -75,7 +75,7 @@
     @apply opacity-0 duration-500 -translate-y-6;
   }
   .btn-design {
-    @apply bg-secondary w-[200px] py-2 rounded-xl text-white 
+    @apply bg-accent w-[200px] py-2 rounded-xl text-white 
     font-light tracking-wide;
   }
 }

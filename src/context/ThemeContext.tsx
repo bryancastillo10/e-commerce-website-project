@@ -17,7 +17,7 @@ export const ThemeContextProvider = ({ children }: ContextProviderType) => {
         <ThemeContext.Provider value={contextValues}>
             <ThemeToggle theme={theme} handleToggle={toggleTheme} />
             <div className={`overflow-x-hidden transition-[background-color] duration-[0.25s] ease-[ease-in-out]
-            ${theme ? "dark-gradient text-accent" : "main-gradient text-primary"}`}>
+            ${theme ? "bg-[#25171A] text-[#69ddff]" : "bg-[#69ddff] text-[#25171A]"}`}>
                 {children}
             </div>
         </ThemeContext.Provider>

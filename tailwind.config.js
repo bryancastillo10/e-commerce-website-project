@@ -7,7 +7,7 @@ export default {
         primary: "var(--primary-color)",
         secondary: "var(--secondary-color)",
         accent: "var(--accent-color)",
-        accent2: "var(--gray-bg)",
+        neutral:"var(--neutral)",
         danger: "var(--danger-color)"
       },
       fontFamily: {

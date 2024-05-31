@@ -7,7 +7,7 @@ interface ButtonProps{
 
 const Button = ({type,children}:ButtonProps) => {
   return (
-      <button className={`rounded-full ${type ? "bg-primary":"bg-secondary"}`}
+      <button className={`rounded-full ${type ? "bg-accent":"bg-secondary"}`}
       >
           {children}
     </button>
