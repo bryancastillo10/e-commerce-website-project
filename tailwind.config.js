@@ -16,7 +16,7 @@ export default {
         medium: "400",
         bold: "700",
       }, fontSize: {
-        base: "18px",
+        base: "16px",
       },
       fontFamily: {
         primary: "var(--primary-font)",

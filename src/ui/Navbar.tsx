@@ -8,7 +8,7 @@ import { Dropdown, DropdownTransition, Button, NavigationMobile } from "../compo
 const Navbar = () => {
   return (
     <nav className="w-full border-b-2 shadow bg-secondary ">
-      <div className="flex justify-between p-6">
+      <div className="flex justify-between p-6 lg:max-w-[80%] lg:mx-auto">
         <div className="flex md:flex-col lg:flex-row md:gap-0 items-center lg:gap-2">
           <img src={Logo} alt={Logo} className="size-14" />
           <h1 className="font-bold lg:text-[20px] md:text-sm text-accent italic">Bry's Tech Shop</h1>

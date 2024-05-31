@@ -10,7 +10,7 @@ const ThemeToggle = ({ theme, handleToggle }: ThemeToggleProps) => {
 
     return (
         <div className="relative">
-            <div className="absolute z-[100] top-[-80px] right-20 md:right-0 lg:right-64 flex gap-1 items-center mx-2 text-primary">
+            <div className="absolute z-[100] top-[-80px] right-20 md:right-0 lg:right-[7%] flex gap-1 items-center mx-2 text-primary">
                 <Switch
                     checked={theme}
                     onChange={handleToggle}
