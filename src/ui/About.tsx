@@ -1,5 +1,5 @@
 import AboutImg from "/images/gadgets.png";
-import AboutImg2 from "/images/laptop-and-smartphone.svg";
+import AboutImg2 from "../assets/laptop-and-smartphone.svg";
 
 const About = () => {
     return (

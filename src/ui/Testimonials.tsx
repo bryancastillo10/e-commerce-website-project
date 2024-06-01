@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { customerFeedback } from "src/constants";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-
 const Testimonials = () => {
     const [slideIndex, setSlideIndex] = useState<number>(0);
     const autoSlide: boolean = true;
@@ -26,7 +25,7 @@ const Testimonials = () => {
                 <div>
                     <div className="title-container">
                         <p className="section-subtitle">Testimonials</p>
-                        <h1 className="section-header tracking-tighter">Feedback from our Customer</h1>
+                        <h1 className="section-header tracking-tighter lg:tracking-wide">Feedback from our Customer</h1>
                     </div>
                 </div>
             </div>
@@ -36,7 +35,7 @@ const Testimonials = () => {
                         className="animate-testimonials-container">
                         {customerFeedback.map((cust) => (
                             <div key={cust.id} className="testimonials-layout">
-                                <div className="testimonials-card blue-glass">
+                                <div className="testimonials-card blue-glass text-secondary">
                                     <div className="text-lg text-pretty text-left md:text-justify font-medium p-2">
                                         " {cust.comment} "
                                     </div>

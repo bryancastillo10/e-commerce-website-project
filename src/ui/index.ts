@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 import Hero from "./Hero";
+import Sponsor from "./Sponsor"
 import About from "./About";
 import Testimonials from "./Testimonials";
 
@@ -15,7 +16,7 @@ import CheckOut from "./CheckOut";
 
 export {
     Navbar, Footer,
-    Hero, About, Testimonials,
+    Hero, Sponsor, About, Testimonials,
     Contact, Quotes, Services,
     Shop, Sales, CheckOut
 }

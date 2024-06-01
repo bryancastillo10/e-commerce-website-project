@@ -1,4 +1,4 @@
-import Logo from "/images/laptop-and-smartphone.svg";
+import Logo from "../assets/laptop-and-smartphone.svg";
 import { NavDropDown } from "src/constants";
 import { Menu, MenuButton, MenuItems } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
