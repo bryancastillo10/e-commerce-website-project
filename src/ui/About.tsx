@@ -1,16 +1,16 @@
 import AboutImg from "/images/gadgets.png";
-
+import AboutImg2 from "/images/laptop-and-smartphone.svg";
 
 const About = () => {
     return (
         <section id="about">
-            <div className="section-container query-container">
+            <div className="section-container query-container relative ">
                 <div className="lg:max-w-[84%] xl:max-w-full lg:mx-auto">
-                    <div className="flex flex-col gap-2">
-                        <p className="font-light text-base md:text-[18px]">About Us</p>
-                        <h1 className="font-bold text-2xl md:text-3xl tracking-wide">One Stop Tech Shop for the Masses</h1>
+                    <div className="flex flex-col gap-2 md:gap-0">
+                        <p className="section-subtitle">About Us</p>
+                        <h1 className="section-header">One Stop Tech Shop for the Masses</h1>
                     </div>
-                    <div className="mt-10 text-pretty text-base md:text-[18px] md:font-medium tracking-wide font-light text-center leading-tighter md:text-justify">
+                    <div className="section-content">
                         <p>Our team of tech enthusiasts carefully curates our selection to bring you the best and most exciting products on the market.
                         </p>
                         <br />
@@ -18,8 +18,10 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-                <div className="about-img flex justify-center items-center md:max-w-[400px] md:m-auto">
+                <div className="about-img">
                     <img src={AboutImg} alt="about-image" />
+                    <img src={AboutImg2} alt="about-image-2" width="420"
+                        className="hidden xl:block absolute top-0 right-[-30px]" />
                 </div>
             </div>
         </section>

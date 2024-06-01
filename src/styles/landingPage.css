@@ -4,11 +4,11 @@
 /* Navbar Section */
 @layer components {
   .nav-container {
-    @apply fixed z-50 w-full;
+    @apply w-full border-b-2 shadow bg-secondary;
   }
-  .nav-subcontainer {
-    @apply flex justify-between w-full md:max-w-[80%] 
-    xl:max-w-[70%] mx-auto;
+  .nav-hamburger-menu {
+    @apply md:hidden flex items-center text-accent p-1 cursor-pointer
+    duration-500 ease-out hover:bg-emerald-200/80 rounded-2xl ;
   }
 }
 
@@ -34,8 +34,8 @@
 
 /* About Section */
 @layer components {
-  .about-title {
-    @apply flex flex-col mb-2;
+  .about-img {
+    @apply  flex justify-center items-center md:max-w-[400px] md:m-auto;
   }
 }
 
