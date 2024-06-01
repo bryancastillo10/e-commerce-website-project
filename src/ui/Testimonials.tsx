@@ -24,9 +24,9 @@ const Testimonials = () => {
         <section id="testimonials">
             <div className="section-container query-container">
                 <div>
-                    <div className="about-title">
+                    <div className="title-container">
                         <p className="section-subtitle">Testimonials</p>
-                        <h1 className="section-header">Feedback from our Customer</h1>
+                        <h1 className="section-header tracking-tighter">Feedback from our Customer</h1>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ const Testimonials = () => {
                         {customerFeedback.map((cust) => (
                             <div key={cust.id} className="testimonials-layout">
                                 <div className="testimonials-card blue-glass">
-                                    <div className="text-lg text-left md:text-justify font-semibold p-2">
+                                    <div className="text-lg text-pretty text-left md:text-justify font-medium p-2">
                                         " {cust.comment} "
                                     </div>
                                     <div className="flex gap-1 items-center justify-center lg:justify-end mb-8">
@@ -58,7 +58,7 @@ const Testimonials = () => {
                     <div className="slide-indicator-position">
                         <div className="slide-indicator">
                             {customerFeedback.map((_, i) => (
-                                <div key={i}  className={`transition-all size-3 bg-white rounded-full
+                                <div key={i} className={`transition-all size-3 bg-white rounded-full
                                 ${slideIndex === i ? "p-2" : "bg-opacity-50"}
                                 `} />
                             ))}

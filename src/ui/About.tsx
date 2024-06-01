@@ -5,7 +5,7 @@ const About = () => {
     return (
         <section id="about">
             <div className="section-container query-container relative ">
-                <div className="lg:max-w-[84%] xl:max-w-full lg:mx-auto">
+                <div className="title-container">
                     <div className="flex flex-col gap-2 md:gap-0">
                         <p className="section-subtitle">About Us</p>
                         <h1 className="section-header">One Stop Tech Shop for the Masses</h1>

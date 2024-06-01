@@ -34,8 +34,45 @@
 
 /* About Section */
 @layer components {
+  .title-container{
+    @apply lg:max-w-[84%] xl:max-w-full lg:mx-auto;
+  }
   .about-img {
     @apply  flex justify-center items-center md:max-w-[400px] md:m-auto;
+  }
+}
+
+/* Testimonials Section */
+/* Testimonial Section */
+@layer components{
+  .testimonials-container{
+    @apply overflow-hidden relative p-2 w-[90%];
+  }
+  .animate-testimonials-container{
+    @apply flex relative transition-transform ease-out duration-1000;
+  }
+  .testimonials-btn-section{
+    @apply flex items-center justify-between left-[-16px] right-[-16px]
+    md:right-[100px] md:left-[100px]
+    lg:right-[180px] lg:left-[180px]
+     p-4 absolute inset-0;
+  }
+  .testimonials-layout{
+    @apply pt-4 flex flex-col shrink-0 gap-2 w-full mx-auto;
+  }
+  .testimonials-card{
+    @apply flex flex-col justify-evenly gap-6 md:gap-0
+    border-2 border-white rounded-2xl p-8 lg:min-h-[250px] w-[80%]
+    md:max-w-[50%] m-auto;
+  }
+  .slide-btn{
+    @apply p-1 rounded-full text-black shadow-md bg-white/50 hover:bg-white;
+  }
+  .slide-indicator-position{
+    @apply absolute bottom-0 md:bottom-6 left-0 right-0;
+  }
+  .slide-indicator{
+    @apply flex justify-center items-center gap-2;
   }
 }
 
