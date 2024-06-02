@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 import Hero from "./Hero";
-import Sponsor from "./Sponsor"
+import Sponsor from "./Sponsor";
 import About from "./About";
 import Testimonials from "./Testimonials";
 

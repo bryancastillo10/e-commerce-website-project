@@ -1,4 +1,3 @@
-// import { Acer, Asus } from "../assets";
 import { ReactComponent as Acer } from "../assets/acer.svg";
 import { ReactComponent as Asus } from "../assets/asus.svg";
 import { ReactComponent as Apple } from "../assets/apple.svg";
