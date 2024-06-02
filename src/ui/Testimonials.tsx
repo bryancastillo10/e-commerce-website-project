@@ -20,8 +20,8 @@ const Testimonials = () => {
     }, [])
 
     return (
-        <section id="testimonials">
-            <div className="section-container query-container">
+        <section id="testimonials" className="bg-[hsla(202,100%,35%,0.3)] p-4">
+            <div className="section-container query-container" >
                 <div>
                     <div className="title-container">
                         <p className="section-subtitle">Testimonials</p>
