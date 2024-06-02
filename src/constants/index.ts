@@ -5,7 +5,11 @@ import {
 } from "./type";
 import { shippingDate, maxDate } from "src/utilities";
 import { Receipt, Wrench, MessageCircleQuestion, ShieldCheck } from "lucide-react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { ReactComponent as Facebook } from "../assets/facebook.svg";
+import { ReactComponent as Twitter } from "../assets/twitter.svg";
+import { ReactComponent as Instagram } from "../assets/instagram.svg";
+import { ReactComponent as Linkedin } from "../assets/linkedin.svg";
+
 const NavDropDown: NavDropDownProps = {
     "Home": [{
         id: 1,

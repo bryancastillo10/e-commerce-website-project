@@ -14,7 +14,7 @@ const Button = ({ type, children }: ButtonProps) => {
       whileHover={buttonAnimation.whileHover}
       transition={buttonAnimation.transition}
       className={`rounded-2xl font-bold px-4 py-2 tracking-wide w-[150px]
-       ${type === "call" ? "bg-accent text-white" : "bg-secondary"}`}
+       ${type === "call" ? "bg-accent text-white ":""}`}
     >
       {children}
     </motion.button>

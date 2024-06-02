@@ -23,7 +23,7 @@ export interface servicesCardsProps {
 export interface socialMediaProps {
     id: number;
     name: string;
-    icon: LucideIcon;
+    icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 }
 
 interface trendsArray {
