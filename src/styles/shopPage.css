@@ -15,9 +15,9 @@
     @apply grid grid-cols-1 max-w-[90%] mx-auto md:flex-row md:grid-cols-3
       justify-center gap-y-6 gap-x-10;
   }
-  .btn-design-2 {
+  .btn-design {
     @apply rounded-2xl mt-4 duration-500 ease-in-out 
-    bg-secondary hover:bg-emerald-400 hover:scale-110
+    bg-primary hover:bg-emerald-400 hover:scale-110
      text-sm text-white/80 p-2 tracking-wide;
   }
   .cartlist-container {

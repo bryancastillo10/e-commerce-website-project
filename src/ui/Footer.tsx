@@ -1,4 +1,4 @@
-import { Button } from "src/components";
+import { Button,Linker } from "src/components";
 import { socialMedia } from "src/constants";
 
 const Footer = () => {
@@ -24,9 +24,9 @@ const Footer = () => {
         <div className="text-center lg:text-left lg:ml-10 mb-4 lg:mb-0">
           <h1 className="lg:font-bold lg:tracking-wider">Quick Links</h1>
             <ul className="flex flex-col gap-2 mt-4 text-sm font-light lg:text-base tracking-wider">
-            <li>Home</li>
-            <li>Contact</li>
-            <li>Shop</li>
+            <li><Linker to="/">Home</Linker></li>
+            <li><Linker to="contact">Contact</Linker></li>
+            <li><Linker to="shop">Shop</Linker></li>
             </ul>
         </div>
         <div className="flex flex-col justify-center items-center gap-2 my-4 lg:my-0 overflow-x-hidden">
@@ -39,7 +39,7 @@ const Footer = () => {
             text-sm min-w-fit md:min-w-max duration-500 ease-in-out hover:bg-neutral-green">Send Now</button>
           </div>
           <div className="text-center lg:max-w-[90%] lg:ml-20  py-4">
-            <Button type="call">Shop Now</Button>
+            <Button link="shop" type="call">Shop Now</Button>
           </div>
         </div>
       </div>

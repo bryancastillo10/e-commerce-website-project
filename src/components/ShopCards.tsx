@@ -21,7 +21,7 @@ const ShopCards = ({ id, name, price, imgPath }: ShopCardsProps) => {
                 {quantity === 0 ?
                     <div className="max-w-[75%] md mx-auto">
                         <button onClick={() => increaseCart(id)}
-                            className="btn-design-2">Add to Cart
+                            className="btn-design">Add to Cart
                         </button>
                     </div> :
                     <QuantityButton

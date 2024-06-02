@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Linker from "./Linker";
 import Modal from "./Modal";
 import Dropdown from "./Dropdown";
 import DropdownTransition from "./DropdownTransition";
@@ -14,6 +15,7 @@ import Trends from "./Trends";
 
 export {
     Button,
+    Linker,
     Modal,
     Dropdown,
     DropdownTransition,

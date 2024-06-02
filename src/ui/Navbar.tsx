@@ -2,7 +2,10 @@ import Logo from "../assets/laptop-and-smartphone.svg";
 import { NavDropDown } from "src/constants";
 import { Menu, MenuButton, MenuItems } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
-import { Dropdown, DropdownTransition, Button, NavigationMobile } from "../components";
+import {
+  Dropdown, DropdownTransition,
+  Button, NavigationMobile, Linker
+} from "../components";
 
 
 const Navbar = () => {
@@ -17,7 +20,7 @@ const Navbar = () => {
         <div className="hidden md:flex gap-10 items-center">
           {/* Home Dropdown */}
           <Menu>
-            <MenuButton className="flex gap-0.5">Home <ChevronDown /></MenuButton>
+            <MenuButton className="flex items-center gap-0.5"><Linker to="/">Home</Linker> <ChevronDown /></MenuButton>
             <DropdownTransition>
               <MenuItems anchor="bottom start" className="border-2 p-2 rounded-xl form-glass" >
                 {NavDropDown.Home.map((nav) => (
@@ -29,7 +32,7 @@ const Navbar = () => {
 
           {/* Contact Dropdown */}
           <Menu>
-            <MenuButton className="flex gap-0.5">Contact <ChevronDown /></MenuButton>
+            <MenuButton className="flex items-center gap-0.5"><Linker to="contact">Contact</Linker> <ChevronDown /></MenuButton>
             <DropdownTransition>
               <MenuItems anchor="bottom start" className="border-2 p-2 rounded-xl form-glass" >
                 {NavDropDown.Contact.map((nav) => (
@@ -41,7 +44,7 @@ const Navbar = () => {
 
           {/* Shop Dropdown */}
           <Menu>
-            <MenuButton className="flex gap-0.5">Shop <ChevronDown /></MenuButton>
+            <MenuButton className="flex items-center gap-0.5"><Linker to="shop">Shop</Linker> <ChevronDown /></MenuButton>
             <DropdownTransition>
               <MenuItems anchor="bottom start" className="border-2 p-2 rounded-xl form-glass" >
                 {NavDropDown.Shop.map((nav) => (
@@ -54,7 +57,7 @@ const Navbar = () => {
 
         {/* Call to Action Button */}
         <div className="hidden md:flex lg:max-w-[200px] mx-10  items-center">
-          <Button type="call">Get Started</Button>
+          <Button link="shop" type="call">Get Started</Button>
         </div>
 
         {/* Hamburger Menu */}

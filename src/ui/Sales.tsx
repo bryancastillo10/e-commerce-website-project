@@ -20,8 +20,8 @@ const Sales = () => {
                             your tech experience.
                         </p>
                     </div>
-                    <div className="md:max-w-[40%] duration-500 ease-in-out hover:scale-110">
-                        <img className="rounded-xl" src={SalesImg} alt="sales-image" />
+                    <div className="max-w-[80%] md:max-w-[40%] mx-auto duration-500 ease-in-out hover:scale-110">
+                        <img className="rounded-xl size-80 lg:size-96" src={SalesImg} alt="sales-image" />
                     </div>
                 </div>
             </div>
