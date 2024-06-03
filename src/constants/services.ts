@@ -10,6 +10,7 @@ interface servicesCardsProps {
   id: number;
   title: string;
   icon: LucideIcon;
+  cardImg: string;
   description: string;
 }
 
@@ -18,18 +19,21 @@ const servicesList: servicesCardsProps[] = [
     id: 1,
     title: "Buy and Sell",
     icon: Receipt,
+    cardImg: "/services/buy-and-sell.png",
     description: "Buy or sell new and pre-owned tech gadgets with ease",
   },
   {
     id: 2,
     title: "Repair and Service",
     icon: Wrench,
+    cardImg:"/services/repair.png",
     description: "Get your devices repaired by our certified technicians",
   },
   {
     id: 3,
     title: "Tech Consultations",
     icon: MessageCircleQuestion,
+    cardImg:"/services/consultation.png",
     description:
       "Receive expert advice on the best tech solutions for your needs",
   },
@@ -37,6 +41,7 @@ const servicesList: servicesCardsProps[] = [
     id: 4,
     title: "Extended Warranties",
     icon: ShieldCheck,
+    cardImg:"/services/warranty.png",
     description:
       "Protect your investment with our comprehensive warranty plans",
   },

@@ -17,7 +17,7 @@ const QuoteCards = ({ generatedQuotes, tags }: QuoteCardsProps) => {
       </div>
       <div className="flex justify-evenly my-2 md:my-0 gap-2">
         {tags.flat().map((t, id) => {
-          return (<span className="quote-tags bg-secondary-glass"
+          return (<span className="quote-tags bg-neutral-green text-secondary"
             key={id}>{t}</span>)
         }
         )}

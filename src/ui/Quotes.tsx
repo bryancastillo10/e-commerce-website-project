@@ -14,7 +14,7 @@ const Quotes = () => {
           <div className="about-title">
             <p className="section-subtitle">Quotes Generator</p>
             <h1 className="section-header">Motivational Quotes </h1>
-            <p className="mt-2">Click on the button to generate some quotes</p>
+            <p className="mt-2">Click the button to generate some quotes</p>
           </div>
         </div>
       </div>
