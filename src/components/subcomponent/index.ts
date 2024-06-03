@@ -4,13 +4,13 @@ import CartList from "./CartList";
 import AddressSection from "./AddressSection";
 import Input from "./Input";
 import TextArea from "./TextArea";
-import SelectCountry from "./SelectCountry";
+import Select from "./Select";
 
 export {
   QuantityButton,
   Input,
   TextArea,
-  SelectCountry,
+  Select,
   PriceSummary,
   CartList,
   AddressSection,

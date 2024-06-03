@@ -1,12 +1,21 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { buttonAnimation } from "src/utilities/animation";
 import { useContactFormContext } from "src/context/UseContexts";
-import { Input, SelectCountry, TextArea } from "./subcomponent";
+import { Input, Select, TextArea } from "./subcomponent";
 import { contactFields } from "src/constants";
+import { fetchCountry } from "src/utilities";
 
 const ContactForm = () => {
   const { onChangeValues, handleSubmit, allFiledsAreFilled } =
     useContactFormContext();
+  const [country, setCountry] = useState<string[]>([]);
+  useEffect(() => {
+    fetchCountry().then((countries) => {
+      setCountry(countries);
+    });
+  }, []);
+  
   return (
     <section className="my-4 md:p-4 lg:p-8 dark:text-gray-800">
       <form
@@ -29,12 +38,12 @@ const ContactForm = () => {
           </div>
         ))}
 
-        <div className="flex items-center text-secondary gap-2">
-          <label>Country</label>
-          <SelectCountry
+        <div>
+          <Select
             id="country"
             required={true}
             onChange={onChangeValues}
+            options={country}
           />
         </div>
 
