@@ -67,11 +67,12 @@
 /* Quote Generator Section */
 @layer components {
   .quote-section-layout {
-    @apply flex flex-col justify-center items-center gap-4;
+    @apply flex flex-col gap-4 md:flex-row items-center  max-w-[85%] mx-auto
+    md:items-start p-2 md:p-4  min-h-[350px];
   }
   .quote-card-container {
-    @apply flex flex-col justify-between
-    w-full max-w-[90%] md:max-w-[50%] border-2 rounded-2xl p-4;
+    @apply flex flex-col gap-2 justify-between
+    w-full md:w-[80%] mx-auto  border-2 rounded-2xl p-4;
   }
   .quote-header {
     @apply flex flex-col justify-center items-end mt-1 md:py-2;

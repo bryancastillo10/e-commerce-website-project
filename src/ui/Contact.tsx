@@ -35,7 +35,7 @@ const Contact = () => {
             />
           )}
         </article>
-        <div className="grid grid-cols-1 gap-2 lg:w-[70%] mx-auto">
+        <div className="grid grid-cols-1 gap-2 lg:w-[70%] mx-auto mb-8">
           <div>
             <Trends />
           </div>
