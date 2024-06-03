@@ -11,12 +11,19 @@ const Contact = () => {
     <section id="contact-form" className="pt-6 md:pt-10">
       <div className="section-container query-container relative md:px-8">
         <div>
-          <p className="section-subtitle">Contact Us</p>
-          <h1 className="section-header">Feel Free to Message Us</h1>
+          <p className="section-subtitle text-center md:text-left">
+            Contact Us
+          </p>
+          <h1 className="section-header text-center md:text-left">
+            Feel Free to Message Us
+          </h1>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:max-w-[90%] mx-auto ">
-        <div className="">
+      <div
+        className="grid grid-cols-1 justify-evenly
+       items-center md:grid-cols-2 max-w-[80%] mx-auto "
+      >
+        <article>
           <ContactForm />
           {openModal && (
             <Modal
@@ -27,10 +34,14 @@ const Contact = () => {
               toggleModal={toggleModal}
             />
           )}
-        </div>
-        <div className="">
-          <Trends />
-          <AddressSection />
+        </article>
+        <div className="grid grid-cols-1 gap-2 lg:w-[70%] mx-auto">
+          <div>
+            <Trends />
+          </div>
+          <div>
+            <AddressSection />
+          </div>
         </div>
       </div>
     </section>

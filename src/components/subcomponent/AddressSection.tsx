@@ -2,7 +2,7 @@ import { Store, Phone, Mail } from "lucide-react";
 
 const AddressSection = () => {
   return (
-    <div className="address-container">
+    <div className="p-2 border shadow-md max-w-[90%] md:max-w-full mx-auto rounded-xl bg-secondary-glass">
       <div className="p-2 my-1 md:my-2">
         <div className="address-header">
           <Store />

@@ -30,7 +30,7 @@
     @apply pt-3 pb-2 block w-full px-0 mt-0 z-[-1] border-gray-200;
   }
   .address-container {
-    @apply flex flex-col p-2 border-[0.5px] shadow-md max-w-[65%] mx-auto rounded-xl;
+    @apply p-2 border-[0.5px] shadow-md max-w-[65%] mx-auto rounded-xl;
   }
   .address-header {
     @apply flex justify-start gap-2 items-center text-lg;
