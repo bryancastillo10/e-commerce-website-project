@@ -4,6 +4,7 @@ import { trendsInfo } from "./trends";
 import { customerFeedback } from "./feedback";
 import { socialMedia } from "./socials";
 import { billingFormItems, paymentMethodOptions } from "./billing";
+import { contactFields } from "./contactform";
 
 export {
   NavDropDown,
@@ -13,4 +14,5 @@ export {
   customerFeedback,
   billingFormItems,
   paymentMethodOptions,
+  contactFields,
 };

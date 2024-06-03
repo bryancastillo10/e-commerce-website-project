@@ -2,7 +2,7 @@ import { Store, Phone, Mail } from "lucide-react";
 
 const AddressSection = () => {
   return (
-    <div className="address-container form-glass">
+    <div className="address-container">
       <div className="p-2 my-1 md:my-2">
         <div className="address-header">
           <Store />
@@ -26,7 +26,7 @@ const AddressSection = () => {
         <p className="text-[14px] md:text-[18px]">brytechshop@email.com</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default AddressSection;

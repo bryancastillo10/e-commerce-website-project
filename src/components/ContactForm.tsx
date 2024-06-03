@@ -1,82 +1,62 @@
-import { useEffect, useState } from 'react';
-import { Field, Label, Select, Textarea } from '@headlessui/react';
-import { fetchCountry } from 'src/utilities';
-import { motion } from "framer-motion";
-import { buttonAnimation } from "src/utilities/animation";
-import { useContactFormContext } from 'src/context/UseContexts';
-import { useThemeContext } from 'src/context/UseContexts';
+// import { motion } from "framer-motion";
+// import { buttonAnimation } from "src/utilities/animation";
+import { useContactFormContext } from "src/context/UseContexts";
+import { Input, SelectCountry, TextArea } from "./subcomponent";
+import { contactFields } from "src/constants";
 
 const ContactForm = () => {
-    const { onChangeValues, handleSubmit, allFiledsAreFilled } = useContactFormContext();
-    const [country, setCountry] = useState<string[]>([]);
-    const { theme } = useThemeContext();
-    useEffect(() => {
-        fetchCountry().then(countries => {
-            setCountry(countries);
-        })
-    }, [])
-    return (
-        <div className="form-container form-glass">
-            <h1 className="form-title">We are Open to your Feedback</h1>
-            <form onSubmit={handleSubmit}>
-                <div className="mt-2">
-                    <Field className="relative z-0 w-full mb-5">
-                        <input className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-secondary border-white/80"
-                            type="text" placeholder="" onChange={onChangeValues} name="givenName" required />
-                        <Label className="absolute duration-300 top-3 -z-1 origin-0 text-secondary">Name</Label>
-                    </Field>
+  const { onChangeValues, handleSubmit, allFiledsAreFilled } =
+    useContactFormContext();
+  return (
+    <section className="p-6 dark:text-gray-800">
+      <form
+        className="w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow blue-glass"
+        onSubmit={handleSubmit}
+      >
+        <h1 className="w-full text-xl font-bold leading-tight text-secondary">
+          Open to Feedback
+        </h1>
 
-                    <Field className="relative z-0 w-full mb-5">
-                        <input className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-secondary border-white/80"
-                            type="text" placeholder="" onChange={onChangeValues} name="email" required />
-                        <Label className="absolute duration-300 top-3 -z-1 origin-0 text-secondary">Email</Label>
-                    </Field>
+        {contactFields.map((contact) => (
+          <div key={contact.id}>
+            <Input
+              id={contact.id}
+              type={contact.type}
+              placeholder={contact.placeholder}
+              onChange={onChangeValues}
+              required={contact.required}
+            />
+          </div>
+        ))}
 
-                    <Field className="relative z-0 w-full mb-5">
-                        <input className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-secondary border-white/80"
-                            type="text" placeholder="" onChange={onChangeValues} name="subject" required />
-                        <Label className="absolute duration-300 top-3 -z-1 origin-0 text-secondary">Subject</Label>
-                    </Field>
-
-                    <Field className="mt-8 relative w-full mb-5">
-                        <Select className="form-billing-select bg-transparent
-                     border-0 border-b-2 appearance-none
-                    focus:outline-none focus:ring-0 focus:border-black"
-                            name="country"
-                            onChange={onChangeValues}>
-                            {country.map((countrylist) => (
-                                <option className="bg-secondary text-white/80"
-                                    key={countrylist} value={countrylist}>{countrylist}</option>
-                            ))}
-                        </Select>
-                        <Label className="form-label">Your Country</Label>
-                        <span className="text-sm text-danger hidden" id="error">Country has to be selected</span>
-                    </Field>
-
-                    <Field className="form-field-textarea">
-                        <Label htmlFor="message" className="origin-[0%] text-white/80">Message</Label>
-                        <Textarea name="message"
-                            className={`bg-transparent border-2 rounded-2xl resize-none min-h-[100px]
-                        focus:outline-none focus:ring-0 focus:border-secondary indent-2 p-1 ${theme ? "text-accent" : "text-secondary"}`}
-                            onChange={onChangeValues} />
-                    </Field>
-
-                    <div className="mt-8 max-w-[200px] mx-auto">
-                        <motion.button
-                            type="submit"
-                            disabled={allFiledsAreFilled === false}
-                            whileTap={buttonAnimation.whileTap}
-                            whileHover={buttonAnimation.whileHover}
-                            transition={buttonAnimation.transition}
-                            className='btn-design'>
-                            Submit
-                        </motion.button>
-                    </div>
-                </div>
-            </form>
+        <div className="flex items-center text-secondary gap-2">
+          <label>Country</label>
+          <SelectCountry
+            id="country"
+            required={true}
+            onChange={onChangeValues}
+          />
         </div>
-    )
-}
+
+        <div>
+          <TextArea
+            id="message"
+            placeholder="Enter your message..."
+            required={true}
+            onChange={onChangeValues}
+          />
+        </div>
+        <button
+          type="submit"
+          disabled={allFiledsAreFilled === false}
+          className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ring-opacity-50 
+          bg-primary hover:ring-accent dark:text-gray-50"
+        >
+          Send
+        </button>
+      </form>
+    </section>
+  );
+};
 
 export default ContactForm;
-

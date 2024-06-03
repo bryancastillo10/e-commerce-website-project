@@ -9,28 +9,27 @@ export default {
         accent: "var(--accent-color)",
         neutral: "var(--neutral)",
         "neutral-green": "var(--neutral-green)",
-        danger: "var(--danger-color)"
+        danger: "var(--danger-color)",
       },
       fontWeight: {
         light: "300",
         medium: "400",
         bold: "700",
-      }, fontSize: {
+      },
+      fontSize: {
         base: "16px",
       },
       fontFamily: {
         primary: "var(--primary-font)",
-        secondary: "var(--secondary-font)"
+        secondary: "var(--secondary-font)",
       },
       screens: {
         "2xs": "300px",
         xs: "360px",
         xl: "1150px",
         "2xl": "1500px",
-      }
-
+      },
     },
   },
-  plugins: [],
-}
-
+  plugins: [require("@tailwindcss/forms")],
+};

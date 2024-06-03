@@ -3,7 +3,7 @@
 
 /* Contact Us Section and Address */
 @layer components {
-    .form-container {
+  .form-container {
     @apply mx-auto max-w-md md:max-w-full md:mx-0 2xl:max-w-full px-6
     my-4 py-12 border-2 rounded-2xl shadow-lg sm:rounded-3xl;
   }
@@ -11,12 +11,11 @@
     @apply text-2xl font-bold mb-8 text-center;
   }
   .form-field {
-    @apply relative z-0 mb-5 p-1 ;
+    @apply relative z-0 mb-5 p-1;
   }
 
   .form-input {
-    @apply block w-full pt-3 pb-2 px-0 mt-0 focus:border-secondary
-     ;
+    @apply block w-full pt-3 pb-2 px-0 mt-0 focus:border-secondary;
   }
 
   .form-label {
@@ -31,13 +30,12 @@
     @apply pt-3 pb-2 block w-full px-0 mt-0 z-[-1] border-gray-200;
   }
   .address-container {
-    @apply flex flex-col gap-2 p-4 lg:w-[95%]
-     border-[0.5px] shadow-md rounded-xl;
+    @apply flex flex-col p-2 border-[0.5px] shadow-md max-w-[65%] mx-auto rounded-xl;
   }
   .address-header {
     @apply flex justify-start gap-2 items-center text-lg;
   }
-  
+
   input:focus ~ label,
   input:not(:placeholder-shown) ~ label,
   textarea:focus ~ label,
@@ -90,4 +88,3 @@
       rounded-2xl p-2 shadow-md mb-4;
   }
 }
-
