@@ -1,5 +1,5 @@
-import { ContactForm, Trends, Modal } from "../components";
-import { AddressSection } from "../components/subcomponent";
+import { ContactForm, Trends } from "../components";
+import { AddressSection, Modal } from "../components/subcomponent";
 import { useContactFormContext } from "src/context/UseContexts";
 import { messageSentTitle, messageSentContent } from "src/utilities";
 import { Send } from "lucide-react";

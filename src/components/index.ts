@@ -1,6 +1,5 @@
 import Button from "./Button";
 import Linker from "./Linker";
-import Modal from "./Modal";
 import Dropdown from "./Dropdown";
 import DropdownTransition from "./DropdownTransition";
 import NavigationMobile from "./NavigationMobile";
@@ -14,17 +13,16 @@ import BillingInfo from "./BillingInfo";
 import Trends from "./Trends";
 
 export {
-    Button,
-    Linker,
-    Modal,
-    Dropdown,
-    DropdownTransition,
-    NavigationMobile,
-    ContactForm,
-    ShopCards,
-    QuoteCards,
-    AddedCartItems,
-    BillingInfo,
-    QuantityButton,
-    Trends
+  Button,
+  Linker,
+  Dropdown,
+  DropdownTransition,
+  NavigationMobile,
+  ContactForm,
+  ShopCards,
+  QuoteCards,
+  AddedCartItems,
+  BillingInfo,
+  QuantityButton,
+  Trends,
 };
