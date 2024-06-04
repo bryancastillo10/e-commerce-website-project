@@ -4,12 +4,12 @@
 @layer components {
   .cart-button {
     @apply absolute top-[40%]  md:top-10 sm:top-8 right-0 lg:right-16 p-4 cursor-pointer 
-      hover:bg-danger text-white hover:text-black/60 ease-in duration-500 rounded-full 
-      border-solid border-2 border-white;
+      hover:bg-danger text-amber-400 hover:text-accent ease-in duration-500 rounded-full 
+      border-solid border-2 border-amber-400;
   }
   .cart-quantity-style {
     @apply absolute right-0 flex justify-center items-center
-      rounded-full p-1 bg-danger text-primary w-[30px];
+      rounded-full p-1 bg-danger text-amber-400 w-[30px];
   }
   .shop-item-cards {
     @apply grid grid-cols-1 max-w-[90%] mx-auto md:flex-row md:grid-cols-3
@@ -17,11 +17,11 @@
   }
   .btn-design {
     @apply rounded-2xl mt-4 duration-500 ease-in-out 
-    bg-primary hover:bg-emerald-400 hover:scale-110
+     hover:scale-110
      text-sm text-white/80 p-2 tracking-wide;
   }
   .cartlist-container {
-    @apply absolute z-[20] md:left-[30%] 2xl:left-[28%]
+    @apply absolute z-[20] md:left-[14%] lg:left-[22%] 2xl:left-[28%]
      sm:left-[28%] border-2 rounded-2xl text-white 
      duration-500 ease-out;
   }
@@ -47,16 +47,15 @@
   }
 
   .form-billing-input {
-    @apply block w-full pt-3 pb-2 px-0 mt-0 focus:border-secondary
-     ;
+    @apply block w-full pt-3 pb-2 px-0 mt-0 focus:border-secondary;
   }
 
   .form-label {
-    @apply absolute duration-300 top-3 z-[-1] origin-[0%] text-white/80;
+    @apply absolute duration-300 top-3 z-[-1] origin-[0%] ;
   }
 
   .form-field-textarea {
-    @apply flex flex-col gap-2 text-white/80;
+    @apply flex flex-col gap-2 ;
   }
 
   .form-billing-select {

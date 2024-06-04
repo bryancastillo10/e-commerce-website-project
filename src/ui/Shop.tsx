@@ -13,7 +13,7 @@ const Shop = () => {
             <div className="section-container query-container relative md:px-8">
                 <div className="relative">
                     <p className="section-subtitle">Gadget Sales</p>
-                    <h1 className="section-header max-w-[200px] md:max-w-full">
+                    <h1 className="section-header max-w-[200px] md:max-w-full leading-none mb-4">
                         Avail Now at Affordable Price
                     </h1>
                     <CartList openCart={openCart} toggleCart={toggleCart} />
@@ -23,7 +23,7 @@ const Shop = () => {
                     <div className="cart-quantity-style">{cartQuantity}</div>
                 </div>)}
             </div>
-            <div className="shop-item-cards xs:max-w-[70%]">
+            <div className="shop-item-cards xs:max-w-[84%] lg:max-w-[77%]">
                 {storeItems.map((items) => (
                     <div key={items.id}>
                         <ShopCards {...items} />

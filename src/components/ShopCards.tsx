@@ -10,18 +10,18 @@ const ShopCards = ({ id, name, price, imgPath }: ShopCardsProps) => {
     const quantity = getItemQuantity(id);
 
     return (
-        <div className="border-white/50 shadow-md border-2 rounded-2xl  py-4 blue-glass">
-            <img className="rounded-2xl"
+        <div className="shadow-md lg:max-w-[85%] rounded-2xl min-h-[280px] lg:min-h-[300px] xl:min-h-[320px] 2xl:min-h-[350px] blue-glass">
+            <img className="rounded-tl-2xl rounded-tr-2xl border-slate-400 border-2"
                 src={imgPath} alt={imgPath} />
-            <div className="flex md:flex-col  justify-center w-[200px] md:max-w-full  mx-auto">
-                <div className="flex flex-col justify-center items-center text-white mt-2">
+            <div className="flex md:flex-col gap-12 md:gap-6 lg:gap-0 mt-2 md:mt-0 justify-evenly md:justify-center items-center w-[200px] md:max-w-full  mx-auto">
+                <div className="flex flex-col justify-center items-center text-secondary mt-2">
                     <h1 className="font-bold text-lg">{name}</h1>
-                    <p className="font-light text-sm">{formatCurrency(price)}</p>
+                    <p className="font-light text-sm 2xl:text-base">{formatCurrency(price)}</p>
                 </div>
                 {quantity === 0 ?
-                    <div className="max-w-[75%] md mx-auto">
+                    <div className="flex-grow min-w-fit">
                         <button onClick={() => increaseCart(id)}
-                            className="btn-design">Add to Cart
+                            className="bg-accent px-4 py-2 rounded-2xl text-sm text-secondary  lg:mt-8">Add to Cart
                         </button>
                     </div> :
                     <QuantityButton

@@ -43,7 +43,7 @@ const SelectedCard = ({
             >
               <DialogPanel
                 className="bg-[hsla(202,100%,35%,0.9)] rounded-xl block 
-              min-h-[300px] md:max-w-full lg:max-w-[80%] xl:max-w-[60%] shadow-md"
+              min-h-[320px] md:max-w-full lg:max-w-[80%] xl:max-w-[60%] shadow-md"
               >
                 <article
                   key={id}
@@ -53,7 +53,7 @@ const SelectedCard = ({
                     <img
                       src={cardImg}
                       alt={cardImg}
-                      className="w-full md:w-[500px] h-[300px] min-h-fit rounded-tl-xl rounded-tr-xl md:rounded-tr-none md:rounded-bl-xl"
+                      className="w-full md:w-[500px] h-[320px] min-h-fit rounded-tl-xl rounded-tr-xl md:rounded-tr-none md:rounded-bl-xl"
                     />
                   </div>
                   <div className="relative flex flex-col md:max-w-[60%] justify-center items-center">
@@ -75,7 +75,7 @@ const SelectedCard = ({
                       <p className="text-secondary text-sm text-justify text-balance font-light tracking-light">
                         {description}
                       </p>
-                      <div className="mt-4 p-6 md:p-0 md:mt-8 xl:mt-12 text-center">
+                      <div className="p-6 md:py-4 md:p-0 text-center">
                         <motion.button
                           whileTap={buttonAnimation.whileTap}
                           whileHover={buttonAnimation.whileHover}

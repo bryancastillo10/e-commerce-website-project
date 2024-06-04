@@ -30,18 +30,18 @@ const BillingInfo = () => {
                             min={items.min}
                             max={items.max}
                             onChange={onChangeValues}
-                            className="form-billing-input bg-transparent border-0 border-b-2 appearance-none
+                            className="form-billing-input text-primary bg-transparent border-0 border-b-2 appearance-none
                             focus:ring-0 focus:outline-none border-white/80" />
-                        <Label className="form-label">{items.label}</Label>
+                        <Label className="form-label text-primary">{items.label}</Label>
                         <span className="text-sm text-danger hidden" id="error">Name is required</span>
                     </Field>
                 ))}
 
                 <Field className="form-field-textarea">
-                    <Label htmlFor="shippingAddress" className="origin-[0%] text-white/80">Shipping Address</Label>
+                    <Label htmlFor="shippingAddress" className="origin-[0%] text-primary">Shipping Address</Label>
                     <Textarea name="shippingAddress"
                         className="bg-transparent border-2 rounded-2xl resize-none min-h-[100px]
-                        text-accent focus:outline-none focus:ring-0 focus:border-secondary indent-2 p-1"
+                        text-accent focus:outline-none focus:ring-0 focus:border-primary indent-2 p-1"
                         onChange={onChangeValues} />
                 </Field>
 
@@ -52,7 +52,7 @@ const BillingInfo = () => {
                         name="country"
                         onChange={onChangeValues}>
                         {country.map((countrylist) => (
-                            <option className="bg-secondary text-white/80"
+                            <option className="bg-primary text-white/80"
                                 key={countrylist} value={countrylist}>{countrylist}</option>
                         ))}
                     </Select>
@@ -60,7 +60,7 @@ const BillingInfo = () => {
                     <span className="text-sm text-danger hidden" id="error">Country has to be selected</span>
                 </Field>
                 <Field className="relative z-0 mb-5 p-1 w-full">
-                    <Legend className="absolute text-white/80 transform scale-75 -top-3 origin-0">
+                    <Legend className="absolute  transform scale-75 -top-3 origin-0">
                         Select a Payment
                     </Legend>
                     <div className="pt-3 flex flex-col items-start max-w-[90%] mx-auto">

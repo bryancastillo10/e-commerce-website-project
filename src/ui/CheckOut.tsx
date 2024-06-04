@@ -26,7 +26,7 @@ const CheckOut = () => {
                 whileTap={buttonAnimation.whileTap}
                 whileHover={buttonAnimation.whileHover}
                 transition={buttonAnimation.transition}
-                className="rounded-full bg-secondary p-2"
+                className="rounded-full bg-neutral-green text-secondary p-2"
               >
                 <ArrowBigLeft />
               </motion.button>
@@ -37,7 +37,7 @@ const CheckOut = () => {
       </div>
       <div
         className=" flex flex-col justify-center max-w-[85%] lg:max-w-[60%] mx-auto rounded-2xl border-2
-                form-glass"
+                blue-glass text-secondary"
       >
         {clientCartItems.map((cart) => (
           <AddedCartItems key={cart.id} {...cart} removeCart={removeCart} />
