@@ -6,7 +6,7 @@ const PriceSummary = () => {
   const shippingFee: number = 200;
   return (
     <table
-      className="table-fixed md:text-sm tracking-wide
+      className="table-fixed md:text-sm lg:text-base tracking-wide
     md:max-w-[75%] md:text-left text-secondary"
     >
       <tbody>

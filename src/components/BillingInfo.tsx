@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useBillingContext } from "src/context/UseContexts";
-// import { Check } from "lucide-react";
 import { fetchCountry } from "src/utilities";
 import { billingFormItems, paymentMethodOptions } from "src/constants";
 import { Input, TextArea, Select, PriceSummary } from "./subcomponent";
@@ -27,11 +26,11 @@ const BillingInfo = () => {
   const payments = paymentMethodOptions.map((methods) => methods.payMethod);
   return (
     <form
-      className="blue-glass border p-8 md:p-4 space-y-6 rounded-xl shadow  text-primary blue-glass"
+      className="blue-glass lg:max-w-[75%] lg:mx-auto border p-8 md:p-4 space-y-6 rounded-xl shadow  text-primary blue-glass"
       onSubmit={handleSubmit}
     >
       <div className="text-center tracking-wide">
-        <h1 className="w-full text-xl font-bold leading-tight text-secondary">
+        <h1 className="w-full text-xl lg:text-2xl font-bold tracking-wider leading-tight text-secondary">
           Billing Form
         </h1>
         <article className="flex flex-col md:flex-row md:gap-8 justify-evenly md:my-8">

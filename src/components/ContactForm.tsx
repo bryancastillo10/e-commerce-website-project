@@ -17,7 +17,7 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <section className="my-4 md:p-4 lg:p-8 dark:text-gray-800">
+    <section className="my-4 md:p-4 lg:p-8 text-primary">
       <form
         className="border p-8 md:p-4  space-y-6 rounded-md shadow blue-glass"
         onSubmit={handleSubmit}

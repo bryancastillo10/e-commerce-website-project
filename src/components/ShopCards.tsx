@@ -30,7 +30,7 @@ const ShopCards = ({ id, name, price, imgPath }: ShopCardsProps) => {
           <div className="flex-grow min-w-fit">
             <button
               onClick={() => increaseCart(id)}
-              className="bg-accent px-4 py-2 rounded-2xl text-sm text-secondary duration-700 ease-in-out lg:mt-4 hover:bg-primary"
+              className="bg-accent px-4 py-2 rounded-2xl text-sm text-secondary duration-700 ease-in-out md:mt-4 lg:mt-12 hover:bg-primary"
             >
               Add to Cart
             </button>

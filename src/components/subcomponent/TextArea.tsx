@@ -28,7 +28,7 @@ const TextArea = ({
         className="block w-full p-2 rounded 
         focus:outline-primary focus:ring placeholder:text-primary placeholder:text-sm
         focus:ring-opacity-50 focus:primary resize-y"
-      ></textarea>
+      />
     </>
   );
 };

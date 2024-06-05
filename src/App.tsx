@@ -4,11 +4,8 @@ import { ThemeContextProvider } from "./context/ThemeContext";
 import { ShoppingContextProvider } from "./context/ShopContext";
 import { PageRoutes } from "./routes";
 import "./index.css";
-import "./styles/components.css";
 
 const App = () => {
-
-
   return (
     <div>
       <Navbar />
@@ -20,7 +17,7 @@ const App = () => {
       </ThemeContextProvider>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default App;
