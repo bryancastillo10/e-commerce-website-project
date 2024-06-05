@@ -1,20 +1,14 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { buttonAnimation } from "src/utilities/animation";
 import { useContactFormContext } from "src/context/UseContexts";
 import { Input, Select, TextArea } from "./subcomponent";
 import { contactFields } from "src/constants";
-import { fetchCountry } from "src/utilities";
+import { useFetchCountry } from "src/hooks";
 
 const ContactForm = () => {
   const { onChangeValues, handleSubmit, allFieldsAreFilled } =
     useContactFormContext();
-  const [country, setCountry] = useState<string[]>([]);
-  useEffect(() => {
-    fetchCountry().then((countries) => {
-      setCountry(countries);
-    });
-  }, []);
+  const country = useFetchCountry();
 
   return (
     <section className="my-4 md:p-4 lg:p-8 text-primary">

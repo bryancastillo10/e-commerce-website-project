@@ -5,6 +5,7 @@ import {
   BillingContextType,
   BillingInput,
 } from "./contextTypes";
+import { useLocalStorage } from "src/hooks";
 
 export const BillingContext = createContext({} as BillingContextType);
 
@@ -21,7 +22,10 @@ const InitialObject = {
 
 export const BillingContextProvider = ({ children }: ContextProviderType) => {
   // Handling Form
-  const [formData, setFormData] = useState(InitialObject as BillingInput);
+  const [formData, setFormData] = useLocalStorage(
+    "billing-form",
+    InitialObject as BillingInput
+  );
 
   const onChangeValues = (e: EventTypes) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });

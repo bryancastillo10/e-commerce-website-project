@@ -1,14 +1,19 @@
 import { createContext, useState } from "react";
 import {
-  ContextProviderType, ShoppingContextType,
-  CartItemsType, clientCartItemsProps,
+  ContextProviderType,
+  ShoppingContextType,
+  CartItemsType,
+  clientCartItemsProps,
 } from "./contextTypes";
 import storeItems from "src/constants/shop.json";
+import { useLocalStorage } from "src/hooks";
 export const ShoppingContext = createContext({} as ShoppingContextType);
 
-
 export const ShoppingContextProvider = ({ children }: ContextProviderType) => {
-  const [cartItems, setCartItems] = useState<CartItemsType[]>([]);
+  const [cartItems, setCartItems] = useLocalStorage<CartItemsType[]>(
+    "cart-items",
+    []
+  );
 
   // Function 1: Getting the quantity of cart
   function getItemQuantity(id: number) {
@@ -66,25 +71,27 @@ export const ShoppingContextProvider = ({ children }: ContextProviderType) => {
   const [openCart, setOpenCart] = useState<boolean>(false);
   const toggleCart = () => {
     setOpenCart(!openCart);
-  }
+  };
 
   // Calculating the total price of the User's cart
   const totalPrice = cartItems.reduce((total, cartItem) => {
     const item = storeItems.find((i) => i.id === cartItem.id);
     return total + (item?.price || 0) * cartItem.quantity;
-  }, 0)
+  }, 0);
 
   // Identifying those items that weer added to the cart
-  const clientCartItems = cartItems.map((cart) => {
-    const item = storeItems.find((item) => item.id === cart.id);
-    if (item == undefined) return null;
-    return {
-      id: cart.id,
-      quantity: cart.quantity,
-      name: item.name,
-      price: item.price,
-    }
-  }).filter((item): item is clientCartItemsProps => item !== null)
+  const clientCartItems = cartItems
+    .map((cart) => {
+      const item = storeItems.find((item) => item.id === cart.id);
+      if (item == undefined) return null;
+      return {
+        id: cart.id,
+        quantity: cart.quantity,
+        name: item.name,
+        price: item.price,
+      };
+    })
+    .filter((item): item is clientCartItemsProps => item !== null);
 
   // Summarize Functions
   const contextValues = {
@@ -97,7 +104,7 @@ export const ShoppingContextProvider = ({ children }: ContextProviderType) => {
     cartQuantity,
     openCart,
     totalPrice,
-    clientCartItems
+    clientCartItems,
   };
 
   return (
@@ -105,4 +112,4 @@ export const ShoppingContextProvider = ({ children }: ContextProviderType) => {
       {children}
     </ShoppingContext.Provider>
   );
-}
+};

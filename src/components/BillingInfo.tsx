@@ -1,22 +1,15 @@
-import { useState, useEffect } from "react";
 import { useBillingContext } from "src/context/UseContexts";
-import { fetchCountry } from "src/utilities";
 import { billingFormItems, paymentMethodOptions } from "src/constants";
 import { Input, TextArea, Select, PriceSummary } from "./subcomponent";
 import InputDate from "./subcomponent/InputDate";
 import { motion } from "framer-motion";
 import { buttonAnimation } from "src/utilities/animation";
+import { useFetchCountry } from "src/hooks";
 
 const BillingInfo = () => {
   const { handleSubmit, onChangeValues, isAccepted, handleAccepted } =
     useBillingContext();
-
-  const [country, setCountry] = useState<string[]>([]);
-  useEffect(() => {
-    fetchCountry().then((countries) => {
-      setCountry(countries);
-    });
-  }, []);
+  const country = useFetchCountry();
   const textInput = billingFormItems.filter(
     (field) => field.id >= 1 && field.id <= 3
   );
