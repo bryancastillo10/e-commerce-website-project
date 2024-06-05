@@ -1,23 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
 
+
+/* Blue, White, Navy Blue, Black, Light Green, Rose */
 :root {
-  --primary-color: #053D5D;
-  --secondary-color: #0072b2;
-  --accent-color: #88CCEE;
-  --gray-bg: #e5e5e5;
-  --danger-color: #e8407e;
+  --primary-color: hsl(202, 100%, 35%);  
+  --secondary-color: hsl(30, 8%, 95%);  
+  --accent-color: hsl(248, 92%, 25%);  
+  --neutral: hsl(0, 0%, 8%);  
+  --neutral-green: hsl(163, 75%, 34%); 
+  --danger-color: hsl(338, 79%, 58%);  
   --primary-font: "Merriweather", "Sans serif";
-  --secondary-font: "Abril Fatface", serif;
 }
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-family: var(--primary-font);
   scroll-behavior: smooth;
@@ -25,32 +24,8 @@
 
 /* Theme Context */
 @layer utilities {
-  .main-gradient {
-    background-color: #1396E0;
-    background-image: linear-gradient(
-        60deg,
-        hsl(120, 0%, 60%) 0,
-        transparent 55%
-      ),
-      linear-gradient(135deg, hsl(255, 0%, 80%) 0, transparent 55%);
-  }
-
-  .dark-gradient {
-    background-color: #151515;
-    background-image: linear-gradient(
-        65deg,
-        hsl(202.31, 80%, 19%) 0,
-        transparent 59%
-      ),
-      linear-gradient(
-        135deg,
-        hsl(30, 3%, 14.000000000000002%) 0,
-        transparent 55%
-      );
-  }
   .blue-glass {
-    @apply backdrop-blur-[3px] backdrop-saturate-[125%] bg-[rgba(0,114,178,0.50)] 
-   p-4 shadow-md;
+    @apply backdrop-blur-[3px] backdrop-saturate-[125%] bg-[rgba(0,114,178,0.50)] shadow-md;
     -webkit-backdrop-filter: blur(3px) saturate(150%);
   }
   .bg-secondary-glass {
@@ -59,8 +34,8 @@
     -webkit-backdrop-filter: blur(3px) saturate(150%);
   }
   .form-glass {
-    @apply backdrop-blur-[3px] backdrop-saturate-[125%] bg-[rgba(229,229,229,0.25)] 
-   p-4 shadow-md;
+    @apply backdrop-blur-[3px] backdrop-saturate-[150%]
+     bg-[rgba(243,242,241,0.8)] shadow-md;
     -webkit-backdrop-filter: blur(3px) saturate(150%);
   }
 }
@@ -68,27 +43,28 @@
 /* Media Query */
 @layer utilities {
   .section-container {
-    @apply w-full m-auto text-justify  pt-[65px];
+    @apply w-full m-auto text-justify pt-[65px];
   }
   .footer-container {
     @apply lg:max-w-[1100px] md:max-w-[700px] max-w-[320px] m-auto;
   }
   .query-container {
-    @apply max-w-[350px] lg:max-w-[1000px]
-      sm:max-w-[600px] xs:max-w-[300px] 2xs:max-w-[250px] m-auto;
+    @apply xs:max-w-[90%] md:max-w-[90%] lg:max-w-[85%] xl:max-w-[80%]
+      sm:max-w-full  2xs:max-w-[250px] m-auto;
   }
 }
 
 /* Typography */
 @layer utilities {
   .section-header {
-    @apply font-bold text-[28px] lg:text-[2em] sm:text-[1.8em] leading-tight mb-8;
+    @apply font-bold text-2xl md:text-3xl tracking-wide ;
   }
   .section-subtitle {
-    @apply text-[1.25em] lg:text-[1.5em] font-medium;
+    @apply font-light text-base md:text-[18px] leading-none ;
   }
   .section-content {
-    @apply leading-tight text-[18px] lg:text-[1.5em] md:leading-none
-    sm:text-[1.25em];
+    @apply mt-10 text-pretty text-base xl:max-w-[60%] 2xl:max-w-[68%]
+    md:text-[18px] md:font-medium tracking-wide font-light 
+    text-center leading-tight md:text-justify ;
   }
 }

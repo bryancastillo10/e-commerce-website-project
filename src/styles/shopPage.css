@@ -1,0 +1,46 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Shop Section*/
+@layer components {
+  .cart-button {
+    @apply absolute top-[40%]  md:top-10 sm:top-8 right-0 lg:right-16 p-4 cursor-pointer 
+      hover:bg-danger text-amber-400 hover:text-accent ease-in duration-500 rounded-full 
+      border-solid border-2 border-amber-400;
+  }
+  .cart-quantity-style {
+    @apply absolute right-0 flex justify-center items-center
+      rounded-full p-1 bg-danger text-amber-400 w-[30px];
+  }
+  .shop-item-cards {
+    @apply grid grid-cols-1 max-w-[90%] mx-auto md:flex-row md:grid-cols-3
+      justify-center gap-y-6 gap-x-10;
+  }
+  .btn-design {
+    @apply rounded-2xl mt-4 duration-500 ease-in-out 
+     hover:scale-110
+     text-sm text-white/80 p-2 tracking-wide;
+  }
+  .cartlist-container {
+    @apply absolute z-[20] md:left-[14%] lg:left-[22%] 2xl:left-[28%]
+     sm:left-[28%] border-2 rounded-2xl text-white 
+     duration-500 ease-out;
+  }
+  .cartlist-close-btn {
+    @apply text-danger hover:text-accent ease-in duration-300 cursor-pointer;
+  }
+  .cartlist-total {
+    @apply flex justify-between items-center text-lg;
+  }
+}
+
+@layer utilities {
+  input:invalid[data-focused="true"],
+  select:invalid[data-focused="true"] {
+    @apply border border-danger;
+  }
+  input:invalid[data-focused="true"] ~ span,
+  select:invalid[data-focused="true"] ~ span {
+    @apply block;
+  }
+}

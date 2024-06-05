@@ -1,14 +1,14 @@
-import { Shop, Sales } from "src/components";
-import { motion } from "framer-motion";
-import "src/styles/shopPageComponents.modules.css";
+import { Shop, Sales } from "../ui";
+import { pageTransition } from "src/utilities";
+import "../styles/shopPage.css";
 
 const ShopPage = () => {
-    return (
-        <motion.div>
-            <Shop />
-            <Sales />
-        </motion.div>
-    )
-}
+  return (
+    <>
+      <Shop />
+      <Sales />
+    </>
+  );
+};
 
-export default ShopPage;
+export default pageTransition(ShopPage);

@@ -1,16 +1,17 @@
-import { Hero, About, Services, Sales } from "src/components";
-import "src/styles/landingPageComponents.modules.css";
-import { motion } from "framer-motion";
+import { Hero, Sponsor, About, Sales, Testimonials } from "src/ui";
+import { pageTransition } from "src/utilities";
+import "../styles/landingPage.css";
 
 const LandingPage = () => {
-    return (
-        <motion.div>
-            <Hero />
-            <About />
-            <Services />
-            <Sales />
-        </motion.div>
-    )
-}
+  return (
+    <>
+      <Hero />
+      <Sponsor />
+      <About />
+      <Testimonials />
+      <Sales />
+    </>
+  );
+};
 
-export default LandingPage;
+export default pageTransition(LandingPage);

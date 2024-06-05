@@ -1,0 +1,39 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Navbar Section */
+@layer components {
+  .nav-container {
+    @apply w-full border-b-2 shadow bg-secondary;
+  }
+  .nav-hamburger-menu {
+    @apply md:hidden flex items-center text-accent p-1 cursor-pointer
+    duration-500 ease-out hover:bg-emerald-200/80 rounded-2xl;
+  }
+}
+
+/* Transition Component */
+@layer utilities {
+  .transition-enter {
+    @apply duration-500 ease-out;
+  }
+  .transition-enter-from {
+    @apply opacity-0 -translate-y-6;
+  }
+  .transition-enter-to {
+    @apply opacity-100 translate-y-0;
+  }
+  .transition-leave {
+    @apply duration-500 ease-out;
+  }
+  .transition-leave-from {
+    @apply opacity-100 duration-500 translate-y-0;
+  }
+  .transition-leave-to {
+    @apply opacity-0 duration-500 -translate-y-6;
+  }
+  .btn-design {
+    @apply bg-accent w-[200px] py-2 rounded-xl text-white 
+    font-light tracking-wide;
+  }
+}
