@@ -1,4 +1,5 @@
 import { Hero, Sponsor, About, Sales, Testimonials } from "src/ui";
+import { pageTransition } from "src/utilities";
 import "../styles/landingPage.css";
 
 const LandingPage = () => {
@@ -10,7 +11,7 @@ const LandingPage = () => {
       <Testimonials />
       <Sales />
     </>
-  )
-}
+  );
+};
 
-export default LandingPage;
+export default pageTransition(LandingPage);

@@ -1,5 +1,6 @@
 import { formatCurrency } from "./formatCurrency";
 import { shippingDate, maxDate } from "./dateRestrictions";
+import pageTransition from "./pageTransition";
 import {
   messageSentContent,
   messageSentTitle,
@@ -17,4 +18,5 @@ export {
   purchaseContent,
   purchaseTitle,
   footerMessageTitle,
+  pageTransition,
 };

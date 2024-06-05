@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AddedCartItems, BillingInfo } from "../components";
 import { ArrowBigLeft, PartyPopper } from "lucide-react";
 import { motion } from "framer-motion";
+import { pageTransition } from "src/utilities";
 import { buttonAnimation } from "src/utilities/animation";
 import { Modal } from "../components/subcomponent";
 import { purchaseTitle, purchaseContent } from "src/utilities";
@@ -64,4 +65,4 @@ const CheckOut = () => {
   );
 };
 
-export default CheckOut;
+export default pageTransition(CheckOut);

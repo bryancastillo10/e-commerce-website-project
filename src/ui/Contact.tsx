@@ -2,13 +2,21 @@ import { ContactForm, Trends } from "../components";
 import { AddressSection, Modal } from "../components/subcomponent";
 import { useContactFormContext } from "src/context/UseContexts";
 import { messageSentTitle, messageSentContent } from "src/utilities";
+import { easeOut, motion } from "framer-motion";
 import { Send } from "lucide-react";
 
 const Contact = () => {
   const { openModal, toggleModal } = useContactFormContext();
 
   return (
-    <section id="contact-form" className="pt-6 md:pt-10">
+    <motion.section
+      id="contact-form"
+      className="pt-6 md:pt-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1, ease: easeOut }}
+    >
       <div className="section-container query-container relative md:px-8">
         <div>
           <p className="section-subtitle text-center md:text-left">
@@ -44,7 +52,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

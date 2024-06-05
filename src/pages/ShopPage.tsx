@@ -1,13 +1,14 @@
 import { Shop, Sales } from "../ui";
+import { pageTransition } from "src/utilities";
 import "../styles/shopPage.css";
 
 const ShopPage = () => {
   return (
-      <>
-          <Shop />
-          <Sales/>
-      </>
-  )
-}
+    <>
+      <Shop />
+      <Sales />
+    </>
+  );
+};
 
-export default ShopPage
+export default pageTransition(ShopPage);

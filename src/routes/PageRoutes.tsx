@@ -12,7 +12,7 @@ const PageRoutes = () => {
 
     return (
         <>
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<LandingPage />}>
                         <Route path="home" element={<Hero/>}/>
