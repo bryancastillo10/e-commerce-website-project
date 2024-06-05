@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Menu as HamburgerMenu, X } from "lucide-react";
 import { Home, Phone, Store } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const NavigationMobile = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const navigate = useNavigate();
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
@@ -14,40 +16,41 @@ const NavigationMobile = () => {
         {openMenu ? <X size={34} /> : <HamburgerMenu size={34} />}
       </div>
       {openMenu ? (
-        <div
-          className={`absolute  p-4 duration-500 ease-out
+        <motion.div
+          className="absolute  p-4 duration-500 ease-out
                 form-glass overflow-x-hidden rounded-md 
-                top-[12%] ${openMenu ? "right-0" : "right-[-200px]"}`}
+                top-[12%] right-0"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <ul className="flex justify-center items-center p-1 gap-4">
-            <li className="hover:bg-emerald-200/80 p-1 rounded-md">
-              <Link to="/">
-                <div className="flex flex-col items-center">
-                  <Home />
-                  Home
-                </div>
-              </Link>
-            </li>
+          <div className="flex justify-center items-center p-1 gap-4">
+            <div
+              className="flex flex-col items-center cursor-pointer hover:bg-sky-500 rounded-xl p-1"
+              onClick={() => navigate("/")}
+            >
+              <Home />
+              Home
+            </div>
 
-            <li className="hover:bg-emerald-200/80 p-1 rounded-md">
-              <Link to="contact">
-                <div className="flex flex-col items-center">
-                  <Phone />
-                  Contact
-                </div>
-              </Link>
-            </li>
+            <div
+              className="flex flex-col items-center cursor-pointer hover:bg-sky-500 rounded-xl p-1"
+              onClick={() => navigate("/contact")}
+            >
+              <Phone />
+              Contact
+            </div>
 
-            <li className="hover:bg-emerald-200/80 p-1 rounded-md">
-              <Link to="shop">
-                <div className="flex flex-col items-center">
-                  <Store />
-                  Shop
-                </div>
-              </Link>
-            </li>
-          </ul>
-        </div>
+            <div
+              className="flex flex-col items-center cursor-pointer hover:bg-sky-500 rounded-xl p-1"
+              onClick={() => navigate("/shop")}
+            >
+              <Store />
+              Shop
+            </div>
+          </div>
+        </motion.div>
       ) : (
         ""
       )}
