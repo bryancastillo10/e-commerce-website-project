@@ -10,13 +10,14 @@ import { purchaseTitle, purchaseContent } from "src/utilities";
 const CheckOut = () => {
   const { clientCartItems, removeCart } = useShoppingContext();
   const { openModal, toggleModal } = useBillingContext();
+
   return (
     <section id="checkout" className="pt-6 md:pt-10">
       <div className="section-container query-container relative md:px-8">
-        <div className="relative flex justify-between items-center">
+        <div className="relative flex justify-between items-center pb-4 lg:pb-8">
           <div className="">
             <p className="section-subtitle">Checkout Page</p>
-            <h1 className="section-header max-w-[200px] md:max-w-full">
+            <h1 className="section-header min-w-fit md:max-w-full">
               Your Purchase List
             </h1>
           </div>
@@ -36,7 +37,7 @@ const CheckOut = () => {
         </div>
       </div>
       <div
-        className=" flex flex-col justify-center max-w-[85%] lg:max-w-[60%] mx-auto rounded-2xl border-2
+        className="flex flex-col justify-center max-w-[85%] lg:max-w-[60%] mx-auto rounded-2xl border-2
                 blue-glass text-secondary"
       >
         {clientCartItems.map((cart) => (
@@ -47,8 +48,7 @@ const CheckOut = () => {
         <p className="section-subtitle">Billing Information</p>
         <h1 className="section-header max-w-[300px] md:max-w-full">Purchase</h1>
       </div>
-      <div className="form-container form-glass max-w-[90%] md:max-w-[80%] mx-auto">
-        <h1 className="form-title">Billing Form</h1>
+      <div className="max-w-[90%] md:max-w-[80%] mx-auto my-4">
         <BillingInfo />
         {openModal && (
           <Modal

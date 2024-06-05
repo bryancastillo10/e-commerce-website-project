@@ -1,27 +1,45 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 
-export interface InputProps {
+interface InputProps {
   id: string;
   type: string;
-  placeholder: string;
+  placeholder: string | undefined;
   required: boolean;
+  errorMessage?: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = ({ id, type, placeholder, required, onChange }: InputProps) => {
+const Input = ({
+  id,
+  type,
+  placeholder,
+  required,
+  errorMessage,
+  onChange,
+}: InputProps) => {
+  const [showWarning, setShowWarning] = useState<boolean>(false);
+  const handleBlur = () => {
+    setShowWarning(!showWarning);
+  };
   return (
     <>
-      <label htmlFor={id}></label>
       <input
         id={id}
         type={type}
         placeholder={placeholder}
         required={required}
         onChange={onChange}
+        onBlur={handleBlur}
+        data-focused={showWarning}
         className="block w-full p-2 rounded-xl focus:outline-none 
-        focus:ring focus:ring-opacity-25 focus:dark:ring-primary
-         dark:bg-gray-100 placeholder:text-primary"
+        focus:ring focus:ring-opacity-25 focus:ring-primary
+         bg-gray-100 placeholder:text-primary"
       />
+      {showWarning && (
+        <span className="hidden text-danger text-[10px] lg:text-sm text-left">
+          {errorMessage}**
+        </span>
+      )}
     </>
   );
 };

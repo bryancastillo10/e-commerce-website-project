@@ -12,8 +12,8 @@ const About = () => {
         ></path>
       </svg>
       <div className="section-container query-container relative mt-[-50px] 2xl:mt-[-100px] ">
-        <div className="title-container">
-          <div className="flex flex-col gap-2 md:gap-0">
+        <div className="lg:max-w-[84%] xl:max-w-full lg:mx-auto">
+          <div className="flex flex-col">
             <p className="section-subtitle">About Us</p>
             <h1 className="section-header">
               One Stop Tech Shop for the Masses
@@ -32,7 +32,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="about-img">
+        <div className="flex justify-center items-center md:max-w-[400px] md:m-auto">
           <img src={AboutImg} alt="about-image" />
           <img
             src={AboutImg2}

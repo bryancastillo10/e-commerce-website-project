@@ -8,85 +8,7 @@
   }
   .nav-hamburger-menu {
     @apply md:hidden flex items-center text-accent p-1 cursor-pointer
-    duration-500 ease-out hover:bg-emerald-200/80 rounded-2xl ;
-  }
-}
-
-/* Hero Section */
-@layer components {
-  .hero-img {
-    @apply flex items-center sm:w-[80%] md:w-[50%] 
-      lg:w-[70%] md:justify-center;
-  }
-  .hero-caption {
-    @apply flex flex-col gap-4 mt-[-15%] md:mt-0  w-[80%] 
-        md:max-w-[50%] mx-auto md:mx-0 xl:ml-[-24%] text-center;
-
-    .hero-header {
-      @apply text-[2em] md:text-[2.5em] font-bold font-secondary;
-    }
-    .hero-subheader {
-      @apply text-[1.25em] md:text-[1.5em] font-primary
-    leading-tight;
-    }
-  }
-}
-
-/* About Section */
-@layer components {
-  .title-container{
-    @apply lg:max-w-[84%] xl:max-w-full lg:mx-auto;
-  }
-  .about-img {
-    @apply  flex justify-center items-center md:max-w-[400px] md:m-auto;
-  }
-}
-
-/* Testimonial Section */
-@layer components{
-  .testimonials-container{
-    @apply overflow-hidden relative p-2 w-[90%];
-  }
-  .animate-testimonials-container{
-    @apply flex relative transition-transform ease-out duration-1000;
-  }
-  .testimonials-btn-section{
-    @apply flex items-center justify-between left-[-16px] right-[-16px]
-    md:right-[100px] md:left-[100px]
-    lg:right-[180px] lg:left-[180px]
-     p-4 absolute inset-0;
-  }
-  .testimonials-layout{
-    @apply pt-4 flex flex-col shrink-0 gap-2 w-full mx-auto;
-  }
-  .testimonials-card{
-    @apply flex flex-col justify-evenly gap-6 md:gap-0
-    border-2 border-white rounded-2xl p-8 lg:min-h-[250px] w-[80%]
-    md:max-w-[50%] m-auto;
-  }
-  .slide-btn{
-    @apply p-1 rounded-full text-black shadow-md bg-white/50 hover:bg-white;
-  }
-  .slide-indicator-position{
-    @apply absolute bottom-0 md:bottom-6 left-0 right-0;
-  }
-  .slide-indicator{
-    @apply flex justify-center items-center gap-2;
-  }
-}
-
-/* Services Section */
-@layer components {
-  .services-card-container {
-    @apply grid grid-cols-1 md:grid-cols-2 justify-evenly items-center gap-10;
-  }
-  .services-disclosure {
-    @apply border-[1px] border-primary shadow-md  p-2 rounded-2xl 
-        max-w-[320px] mx-auto hover:scale-110 hover:text-accent
-        duration-1000 ease-in-out;
-  }
-  .services-disclosure-btn {
-    @apply flex w-full items-center justify-center gap-2;
+    duration-500 ease-out hover:bg-emerald-200/80 rounded-2xl;
   }
 }
 
@@ -113,29 +35,5 @@
   .btn-design {
     @apply bg-accent w-[200px] py-2 rounded-xl text-white 
     font-light tracking-wide;
-  }
-}
-
-/* Footer Section */
-@layer components {
-  .footer-container {
-    @apply grid justify-center grid-rows-[1fr_1fr_1fr]
-      md:grid-rows-1 md:grid-cols-[8fr_1fr_1fr] gap-4;
-  }
-  .footer-slogan {
-    @apply flex flex-col justify-center items-center max-w-[250px] md:max-w-[500px]  mx-auto my-2;
-  }
-  .newsletter-input {
-    @apply h-[30px] outline-none bg-transparent text-accent p-2 placeholder:text-accent border-solid border-[1px] border-white;
-  }
-  .newsletter-send-button {
-    @apply h-[30px] bg-[#44AA99] rounded-tr-xl rounded-br-xl p-1.5 flex items-center text-white
-    hover:scale-110 duration-100 ease-in;
-  }
-  .footer-socmed-icon {
-    @apply hover:text-accent hover:rotate-12 duration-500 ease-in-out;
-  }
-  .footer-copyright {
-    @apply flex flex-col md:flex-row justify-center items-center gap-1 max-w-[350px] md:max-w-[900px] h-[100px] mx-auto;
   }
 }

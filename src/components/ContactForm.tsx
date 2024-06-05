@@ -7,7 +7,7 @@ import { contactFields } from "src/constants";
 import { fetchCountry } from "src/utilities";
 
 const ContactForm = () => {
-  const { onChangeValues, handleSubmit, allFiledsAreFilled } =
+  const { onChangeValues, handleSubmit, allFieldsAreFilled } =
     useContactFormContext();
   const [country, setCountry] = useState<string[]>([]);
   useEffect(() => {
@@ -15,7 +15,7 @@ const ContactForm = () => {
       setCountry(countries);
     });
   }, []);
-  
+
   return (
     <section className="my-4 md:p-4 lg:p-8 dark:text-gray-800">
       <form
@@ -34,6 +34,7 @@ const ContactForm = () => {
               placeholder={contact.placeholder}
               onChange={onChangeValues}
               required={contact.required}
+              errorMessage={contact.errorMessage}
             />
           </div>
         ))}
@@ -41,7 +42,9 @@ const ContactForm = () => {
         <div>
           <Select
             id="country"
+            label="country"
             required={true}
+            errorMessage="Country is required"
             onChange={onChangeValues}
             options={country}
           />
@@ -50,6 +53,7 @@ const ContactForm = () => {
         <div>
           <TextArea
             id="message"
+            label="Your message"
             placeholder="Enter your message..."
             required={true}
             onChange={onChangeValues}
@@ -61,7 +65,7 @@ const ContactForm = () => {
             whileHover={buttonAnimation.whileHover}
             transition={buttonAnimation.transition}
             type="submit"
-            disabled={allFiledsAreFilled === false}
+            disabled={allFieldsAreFilled === false}
             className="cursor-pointer bg-primary rounded-2xl font-bold px-4 py-2 tracking-wide w-[150px] text-secondary"
           >
             Send

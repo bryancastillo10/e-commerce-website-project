@@ -28,7 +28,7 @@ export const ContactUsFormContextProvider = ({
     setForms({ ...forms, [e.target.id]: e.target.value });
   };
 
-  const allFiledsAreFilled =
+  const allFieldsAreFilled =
     forms.givenName !== "" &&
     forms.email !== "" &&
     forms.country !== "" &&
@@ -41,10 +41,10 @@ export const ContactUsFormContextProvider = ({
     setOpenModal(!openModal);
   };
 
-  // Hanlding Submit Button
+  // Handling Submit Button
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (allFiledsAreFilled) {
+    if (allFieldsAreFilled) {
       toggleModal();
     }
   };
@@ -53,7 +53,7 @@ export const ContactUsFormContextProvider = ({
     forms,
     onChangeValues,
     handleSubmit,
-    allFiledsAreFilled,
+    allFieldsAreFilled,
     openModal,
     toggleModal,
   };
