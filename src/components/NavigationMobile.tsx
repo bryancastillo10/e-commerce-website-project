@@ -36,7 +36,7 @@ const NavigationMobile = () => {
 
             <div
               className="flex flex-col items-center cursor-pointer hover:bg-sky-500 rounded-xl p-1"
-              onClick={() => navigate("/contact")}
+              onClick={() => navigate("contact")}
             >
               <Phone />
               Contact
@@ -44,7 +44,7 @@ const NavigationMobile = () => {
 
             <div
               className="flex flex-col items-center cursor-pointer hover:bg-sky-500 rounded-xl p-1"
-              onClick={() => navigate("/shop")}
+              onClick={() => navigate("shop")}
             >
               <Store />
               Shop
