@@ -10,7 +10,7 @@ const ShopCards = ({ id, name, price, imgPath }: ShopCardsProps) => {
   const quantity = getItemQuantity(id);
 
   return (
-    <div className="shadow-md lg:max-w-[85%] rounded-2xl min-h-[280px] lg:h-[300px] xl:h-[330px] 2xl:min-h-[400px] blue-glass">
+    <div className="shadow-md lg:max-w-[85%] rounded-2xl min-h-[280px] lg:h-[280px] xl:h-[330px] 2xl:min-h-[400px] blue-glass">
       <img
         className="rounded-tl-2xl rounded-tr-2xl border-slate-400 border-2"
         src={imgPath}
@@ -30,7 +30,7 @@ const ShopCards = ({ id, name, price, imgPath }: ShopCardsProps) => {
           <div className="flex-grow min-w-fit">
             <button
               onClick={() => increaseCart(id)}
-              className="bg-accent px-4 py-2 rounded-2xl text-sm text-secondary duration-700 ease-in-out md:mt-4 lg:mt-12 hover:bg-primary"
+              className="bg-accent px-4 py-2 rounded-2xl text-sm text-secondary duration-700 ease-in-out md:mt-4 lg:mt-8 hover:bg-primary"
             >
               Add to Cart
             </button>

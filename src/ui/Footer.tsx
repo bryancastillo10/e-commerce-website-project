@@ -60,7 +60,7 @@ const Footer = () => {
           </p>
           <div className="flex flex-col max-w-[80%] xs:flex-row xs:max-w-full">
             <input
-              className="rounded-tl-xl rounded-bl-xl text-accent text-sm 
+              className="rounded-tl-xl rounded-bl-xl text-accent text-sm placeholder:text-[12px]
             outline-none indent-2 md:max-w-[60%] min-h-[50%] lg:max-w-[65%] placeholder-emerald-500"
               placeholder="Enter your e-mail"
               type="text"
