@@ -1,16 +1,12 @@
-import { useState } from "react";
 import { servicesList } from "../constants";
 import { Button } from "../components";
+import { useCard } from "src/hooks";
 import { useThemeContext } from "src/context/UseContexts";
 import { SelectedCard } from "src/components/subcomponent";
 
 const Services = () => {
   const { theme } = useThemeContext();
-  const [cardIndex, setCardIndex] = useState<number | null>(null);
-  const toggleOpenCard = (id: number) => {
-    setCardIndex((prevIndex) => (prevIndex === id ? null : id));
-  };
-
+  const { cardIndex, toggleOpenCard } = useCard();
   return (
     <section id="services" className="bg-[hsla(202,100%,35%,0.3)] p-4">
       <div className="section-container query-container pb-10">
