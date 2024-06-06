@@ -1,28 +1,10 @@
-import { useState, useEffect } from "react";
 import { customerFeedback } from "src/constants";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useCarousel } from "src/hooks";
 
 const Testimonials = () => {
-  const [slideIndex, setSlideIndex] = useState<number>(0);
-  const autoSlide: boolean = true;
-  const autoSlideInterval: number = 3000;
-  const handlePrevious = () => {
-    setSlideIndex((index) =>
-      index === 0 ? customerFeedback.length - 1 : index - 1
-    );
-  };
-
-  const handleNext = () => {
-    setSlideIndex((index) =>
-      index === customerFeedback.length - 1 ? 0 : index + 1
-    );
-  };
-  useEffect(() => {
-    if (!autoSlide) return;
-    const slideInterval = setInterval(handleNext, autoSlideInterval);
-    return () => clearInterval(slideInterval);
-  }, []);
-
+  const { slideIndex, handlePrevious, handleNext } =
+    useCarousel(customerFeedback);
   return (
     <section id="testimonials" className="bg-[hsla(202,100%,35%,0.3)] p-4">
       <div className="section-container query-container">
