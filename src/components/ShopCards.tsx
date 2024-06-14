@@ -10,7 +10,7 @@ const ShopCards = ({ id, name, price, imgPath }: ShopCardsProps) => {
   const quantity = getItemQuantity(id);
 
   return (
-    <div className="shadow-md lg:max-w-[85%] rounded-2xl min-h-[280px] lg:h-[280px] xl:h-[330px] 2xl:min-h-[400px] blue-glass">
+    <div className="shadow-md lg:max-w-[85%] sm:w-[450px] h-[290px] sm:h-[400px] md:h-[330px] 2xl:h-[344px] mx-auto rounded-2xl blue-glass">
       <img
         className="rounded-tl-2xl rounded-tr-2xl border-slate-400 border-2"
         src={imgPath}

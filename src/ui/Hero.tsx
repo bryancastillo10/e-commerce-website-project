@@ -14,7 +14,7 @@ const Hero = () => {
     >
       <div className="flex flex-col-reverse md:flex-row justify-evenly items-center mb-4 lg:mx-auto">
         <div className="max-w-[90%] md:max-w-[50%] mx-auto p-2 md:p-0 md:mt-10 xl:p-0 lg:max-w-[40%] xl:max-w-[45%]">
-          <h1 className="font-bold text-4xl text-center leading-normal md:leading-tight md:text-left md:max-w-[70%] min-w-fit">
+          <h1 className="font-secondary text-4xl text-center leading-normal md:leading-tight md:text-left md:max-w-[70%] min-w-fit">
             The Tech Shop You Can Trust!
           </h1>
           <p className="my-4 tracking-wide text-wrap text-center font-light text-base leading-normal p-2 md:text-left md:font-medium md:max-w-[85%]">
