@@ -19,8 +19,10 @@ const Shop = () => {
     >
       <div className="section-container query-container relative md:px-8">
         <div className="relative">
-          <p className="section-subtitle">Gadget Sales</p>
-          <h1 className="section-header max-w-[200px] md:max-w-full leading-none mb-4">
+          <p className="section-subtitle sm:text-center md:text-left">
+            Gadget Sales
+          </p>
+          <h1 className="section-header max-w-[200px] sm:max-w-full sm:text-center md:text-left leading-none mb-4 ">
             Avail Now at Affordable Price
           </h1>
           <CartList openCart={openCart} toggleCart={toggleCart} />

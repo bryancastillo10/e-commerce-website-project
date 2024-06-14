@@ -58,7 +58,7 @@ const Sponsor = () => {
               return (
                 <div
                   key={logo.id}
-                  className="size-[80px] lg:size-[120px] max-w-[70%] mx-auto fill-emerald-200 duration-500 ease-in-out hover:scale-110 hover:fill-emerald-500"
+                  className="size-[80px] lg:size-[120px] max-w-[70%] mx-auto fill-emerald-500 duration-500 ease-in-out hover:scale-110 hover:fill-emerald-300"
                 >
                   <Icons />
                 </div>

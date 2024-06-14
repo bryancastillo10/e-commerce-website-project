@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
 
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
 
-
 /* Blue, White, Navy Blue, Black, Light Green, Rose */
 :root {
-  --primary-color: hsl(202, 100%, 35%);  
-  --secondary-color: hsl(30, 8%, 95%);  
-  --accent-color: hsl(248, 92%, 25%);  
-  --neutral: hsl(0, 0%, 8%);  
-  --neutral-green: hsl(163, 75%, 34%); 
-  --danger-color: hsl(338, 79%, 58%);  
+  --primary-color: hsl(202, 100%, 35%);
+  --secondary-color: hsl(30, 8%, 95%);
+  --accent-color: hsl(248, 92%, 25%);
+  --neutral: hsl(0, 0%, 8%);
+  --neutral-green: hsl(163, 75%, 34%);
+  --danger-color: hsl(338, 79%, 58%);
   --primary-font: "Merriweather", "Sans serif";
+  --secondary-font: "Spicy Rice", "mono";
 }
 
 * {
@@ -57,14 +58,14 @@
 /* Typography */
 @layer utilities {
   .section-header {
-    @apply font-bold text-2xl md:text-3xl tracking-wide ;
+    @apply font-bold text-2xl md:text-3xl tracking-wide;
   }
   .section-subtitle {
-    @apply font-light text-base md:text-[18px] leading-none ;
+    @apply font-light text-base md:text-[18px] leading-none;
   }
   .section-content {
     @apply mt-10 text-pretty text-base xl:max-w-[60%] 2xl:max-w-[68%]
     md:text-[18px] md:font-medium tracking-wide font-light 
-    text-center leading-tight md:text-justify ;
+    text-center leading-tight md:text-justify;
   }
 }
